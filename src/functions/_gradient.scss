@@ -1,0 +1,10 @@
+@mixin linear-gradient($start, $stop, $fallback) {
+	background: none;
+	background-color: $fallback; /* fallback color if gradients are not supported */
+	background-image: -webkit-linear-gradient($start, $stop); /* For Chrome and Safari */
+	background-image:    -moz-linear-gradient($start, $stop); /* For old Fx (3.6 to 15) */
+	background-image:     -ms-linear-gradient($start, $stop); /* For pre-releases of IE 10*/
+	background-image:      -o-linear-gradient($start, $stop); /* For old Opera (11.1 to 12.0) */
+	background-image:         linear-gradient($start, $stop); /* Standard syntax; must be last */
+	background-size: 100%; // Firefox scales this strangely otherwise.
+}

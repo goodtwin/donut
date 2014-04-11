@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    $DEBUG
+\*------------------------------------*/
+/**
+ * Debug mode will visually highlight any potential markup/accessibility quirks
+ * in the browser. Set to `true` or `false`.
+ */
+$debug-mode:        false!default;
+
+
+/*------------------------------------*\
+    $OBJECTS
+\*------------------------------------*/
+/**
+ * Which elements, collections, views, and modules would you like to do?
+ */
+
+/**
+ * Elements
+**/
+$use-button:       false!default;
+$use-divider:      false!default;
+$use-header:       false!default;
+$use-icons:        false!default;
+$use-image:        false!default;
+$use-input:        false!default;
+$use-label:        false!default;
+$use-loader:       false!default;
+$use-progress:     false!default;
+$use-reveal:       false!default;
+$use-segment:      false!default;
+$use-step:         false!default;
+
+/**
+ * Collections
+**/
+$use-breadcrumb:   false!default;
+$use-form:         false!default;
+$use-grid:         false!default;
+$use-menu:         false!default;
+$use-message:      false!default;
+$use-table:        false!default;
+
+/**
+ * Views
+**/
+$use-comment:      false!default;
+$use-feed:         false!default;
+$use-item:         false!default;
+$use-list:         false!default;
+$use-statistic:    false!default;
+
+
+/**
+ * Modules
+**/
+$use-accordion:    false!default;
+$use-chatroom:     false!default;
+$use-checkbox:     false!default;
+$use-dimmer:       false!default;
+$use-dropdown:     false!default;
+$use-modal:        false!default;
+$use-nag:          false!default;
+$use-popup:        false!default;
+$use-rating:       false!default;
+$use-search:       false!default;
+$use-shape:        false!default;
+$use-sidebar:      false!default;
+$use-tab:          false!default;
+$use-transition:   false!default;
+$use-video:        false!default;

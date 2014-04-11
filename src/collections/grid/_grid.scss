@@ -1,0 +1,193 @@
+/**
+ * Leans Heavily on Harry Robert's (@csswizardry) fantastic csswizardry grids: https://github.com/csswizardry/csswizardry-grids
+ */
+
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 2. Remove any margins and paddings that might affect the grid system.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ */
+.grid{
+    list-style:none;                    /* [1] */
+    margin:0;                           /* [2] */
+    padding:0;                          /* [2] */
+    margin-left:-$base-grid-gutter;    /* [3] */
+}
+
+
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width for mobile first.
+ */
+[class*=grid__item]{
+    display:inline-block;               /* [1] */
+    padding-left:$base-grid-gutter;     /* [2] */
+    vertical-align:top;                 /* [3] */
+    width:100%;                         /* [4] */
+
+}
+
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear. Extends `.grid`.
+ */
+[class*=grid][class*='--rev']{
+    direction:rtl;
+    text-align:left;
+
+    >[class*=grid__item]{
+        direction:ltr;
+        text-align:left;
+    }
+}
+
+
+/**
+ * Gutterless grids have all the properties of regular grids, minus any spacing.
+ * Extends `.grid`.
+ */
+[class*=grid][class*='--full']{
+    margin-left:0;
+
+    >[class*=grid__item]{
+        padding-left:0;
+    }
+}
+
+
+/**
+ * Align the entire grid to the right. Extends `.grid`.
+ */
+[class*=grid][class*='--right']{
+    text-align:right;
+
+    >[class*=grid__item]{
+        text-align:left;
+    }
+}
+
+
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes. Extends `.grid`.
+ */
+[class*=grid][class*='--center']{
+    text-align:center;
+
+    >[class*=grid__item]{
+        text-align:left;
+    }
+}
+
+
+/**
+ * Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends
+ * `.grid`.
+ */
+[class*=grid][class*='--middle']{
+
+    >[class*=grid__item]{
+        vertical-align:middle;
+    }
+}
+
+[class*=grid][class*='--bottom']{
+
+    >[class*=grid__item]{
+        vertical-align:bottom;
+    }
+}
+
+
+/**
+ * Create grids with narrower gutters. Extends `.grid`.
+ */
+[class*=grid][class*='--narrow']{
+    margin-left:-$half-grid-gutter;
+
+    >[class*=grid__item]{
+        padding-left:$half-grid-gutter;
+    }
+}
+
+/**
+ * Create grids with narrower gutters. Extends `.grid`.
+ */
+[class*=grid][class*='--narrower']{
+    margin-left:-$half-grid-gutter/2;
+
+    >[class*=grid__item]{
+        padding-left:$half-grid-gutter/2;
+    }
+}
+
+
+/**
+ * Create grids with wider gutters. Extends `.grid`.
+ */
+[class*=grid][class*='--wide']{
+    margin-left:-($base-grid-gutter * 2);
+
+    >[class*=grid__item]{
+        padding-left:$base-grid-gutter * 2;
+    }
+}
+
+/**
+ * Creates a padded grid. Extends `.grid`.
+ */
+[class*=grid][class*='--soft-sides']{
+    padding-right: $base-grid-gutter; padding-left: $base-grid-gutter;
+
+    // &[class*='--harder-mobile']{
+    //     @include media-query(portable){
+    //         padding-right: $base-grid-gutter/2; padding-left: $base-grid-gutter/2;
+    //     }
+    // }
+
+    // &[class*='--hard-mobile']{
+    //     @include media-query(portable){
+    //         padding-right: $base-grid-gutter/2; padding-left: 0px;
+    //     }
+    // }
+
+}
+
+[class*=grid][class*='--soft-top']{
+    padding-top: $base-grid-gutter;
+
+    // &[class*='--harder-mobile']{
+    //     @include media-query(portable){
+    //         padding-top: $base-grid-gutter/2;
+    //     }
+    // }
+
+    // &[class*='--hard-mobile']{
+    //     @include media-query(portable){
+    //         padding-top: 0px;
+    //     }
+    // }
+}
+
+[class*=grid][class*='--soft-ends']{
+    padding-top: $base-grid-gutter;
+    padding-bottom: $base-grid-gutter;
+
+    // &[class*='--harder-mobile']{
+    //     @include media-query(portable){
+    //         padding-top: $base-grid-gutter/2;
+    //         padding-bottom: $base-grid-gutter/2;
+    //     }
+    // }
+
+    // &[class*='--hard-mobile']{
+    //     @include media-query(portable){
+    //         padding-top: 0px;
+    //         padding-bottom: 0px;
+    //     }
+    // }
+}

@@ -1,0 +1,24 @@
+// Ideal Grid.
+@mixin idealGrid($idealWidth, $minWidth, $maxWidth, $minColumns:1, $maxColumns:8, $gutterWidth:$base-grid-gutter){
+
+ 	@media screen and (max-width: ($minColumns + 1) * ($minWidth + $gutterWidth)){
+		width: percentage(1/$minColumns);
+		@if $minColumns == 1 {
+			max-width: $maxWidth;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+		}
+ 	}
+ 	@media screen and (min-width: ($minColumns + 1) * ($minWidth + $gutterWidth)){
+ 		width: percentage(1/($minColumns + 1));
+ 	}
+ 	// Debatable use of $idealWidth to set the next one.
+ 	// $minWidth may be better, depending how comfortable you are with its minimum-ness
+ 	// It also might depend on if you exceed $maxWidth prior to the next breakpoint.
+ 	@for $i from ($minColumns + 2) to ($maxColumns + 1) {
+	 	@media screen and (min-width: $i * ($idealWidth + $gutterWidth)){
+	 		width: percentage(1/$i);
+	 	}
+ 	}
+}
