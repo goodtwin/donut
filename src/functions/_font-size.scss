@@ -8,3 +8,53 @@
     font-size:$font-size;
     font-size:($font-size / $base-font-size)*1rem;
 }
+/**
+ * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ *
+ * When we define a heading we also define a corresponding class to go with it.
+ * This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
+ * heading hierarchy.
+ */
+h1,.alpha{
+    @include font-size($h1-size);
+}
+h2,.beta{
+    @include font-size($h2-size);
+}
+h3,.gamma{
+    @include font-size($h3-size);
+}
+h4,.delta{
+    @include font-size($h4-size);
+}
+h5,.epsilon{
+    @include font-size($h5-size);
+}
+h6,.zeta{
+    @include font-size($h6-size);
+}
+
+/**
+ * A series of classes for setting massive type; for use in heroes, mastheads,
+ * promos, etc.
+ */
+.giga{
+    @include font-size($giga-size);
+}
+.mega{
+    @include font-size($mega-size);
+}
+.kilo{
+    @include font-size($kilo-size);
+}
+
+/**
+ * A series of classes for setting tiny type; for use in smallprint etc.
+ */
+.smallprint,
+.milli{
+    @include font-size($milli-size);
+}
+.micro{
+    @include font-size($micro-size);
+}

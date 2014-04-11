@@ -8,26 +8,28 @@ module.exports = function (grunt) {
 
 		assemble : {
 			options: {
-				assets: '/assets',
+				assets: 'docs/src/assets',
 				flatten: true,
-				partials: ['static/components/**/*.hbs'],
-				layout: ['static/layouts/default.hbs'],
-				data: ['static/data/*.{json,yml}']
+				partials: ['docs/src/partials/*.hbs'],
+				layout: 'docs/src/layouts/default.hbs',
+				data: ['docs/src/data/*.{json,yml}']
 			},
 			pages: {
-				src: ['static/docs/*.hbs'],
-				dest: 'dist/ui/'
+				src: ['docs/src/templates/**/*.hbs'],
+				dest: 'docs/dist/'
 			}
 		},
 		sass: {
-			ui: {
-				options: {
-					includePaths: ['assets/scss/bootstrap/lib/vendor/assets/stylesheets']
-				},
+			dist: {
 				files : {
-					'dist/ui/assets/style.css': 'assets/scss/init.scss'
+					'dist/stylesheets/style.css': 'src/style.scss'
 				}
-			}
+			},
+            docs: {
+                files : {
+                    'docs/dist/assets/stylesheets/docs.css': 'docs/src/assets/stylesheets/docs.scss'
+                }
+            }
 		},
 		myth: {
 			options: {
@@ -39,23 +41,55 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		copy: {
-			js : {
-				files: [{
-					expand: true,
-					flatten: true,
-					src: [
-						'assets/lib/bootstrap/vendor/assets/javascripts/*.js',
-						'assets/lib/donuthole/src/modules/**/*.js'
-					],
-					dest: 'dist/ui/assets/js/'
-				}]
+        clean: {
+			dist: {
+				files: [
+					{
+						dot: true,
+						src: ['dist/*']
+					}
+				]
+			},
+			docs: {
+				files: [
+					{
+						dot: true,
+						src: ['docs/dist/*']
+					}
+				]
 			}
 		},
-		clean: ['dist/ui/'],
+		copy: {
+			dist: {
+				files: [
+					{
+						expand: true,
+						cwd: 'src/',
+						src: ['**/*.js'],
+						dest: 'dist/javascripts/'
+					}
+				]
+			},
+			docs: {
+				files: [
+					{
+						expand: true,
+						cwd: 'docs/src/assets/',
+						src: ['images/*', 'javascripts/*'],
+						dest: 'docs/dist/assets/'
+					},
+					{
+						expand: true,
+						cwd: 'dist/stylesheets/',
+						src: ['*.css'],
+						dest: 'docs/dist/assets/stylesheets/'
+					}
+				]
+			}
+		},
 		watch: {
 			assemble: {
-				files: ['static/**/*'],
+				files: ['docs/src/**/*'],
 				tasks: ['assemble', 'copy']
 			},
 			sass: {
