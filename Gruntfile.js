@@ -25,12 +25,19 @@ module.exports = function (grunt) {
     },
     sass: {
       dist: {
+        options: {
+          sourceComments: 'map',
+        },
         files : {
           'dist/stylesheets/style.css': 'src/style.scss'
         }
       },
       docs: {
+        options: {
+          sourceComments: 'map',
+        },
         files : {
+          'docs/dist/assets/stylesheets/style.css': 'src/style.scss',
           'docs/dist/assets/stylesheets/docs.css': 'docs/src/assets/stylesheets/docs.scss'
         }
       }
@@ -87,12 +94,6 @@ module.exports = function (grunt) {
           cwd: 'docs/src/assets/',
           src: ['images/*', 'javascripts/*'],
           dest: 'docs/dist/assets/'
-        },
-        {
-          expand: true,
-          cwd: 'dist/stylesheets/',
-          src: ['*.css'],
-          dest: 'docs/dist/assets/stylesheets/'
         },
         {
           expand: true,
