@@ -9,14 +9,20 @@ module.exports = function (grunt) {
 		assemble : {
 			options: {
 				assets: 'docs/src/assets',
-				flatten: true,
+				flatten: false,
 				partials: ['docs/src/partials/*.hbs'],
 				layout: 'docs/src/layouts/default.hbs',
 				data: ['docs/src/data/*.{json,yml}']
 			},
 			pages: {
-				src: ['docs/src/templates/**/*.hbs'],
-				dest: 'docs/dist/'
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'docs/src/templates/',
+                        src: ['**/*.hbs'],
+                        dest: 'docs/dist/'
+                    }
+                ]
 			}
 		},
 		sass: {
