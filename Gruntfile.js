@@ -37,9 +37,14 @@ module.exports = function (grunt) {
 			},
 			dist: {
 				files: {
-					'dist/ui/assets/style.css': 'dist/ui/assets/style.css'
+					'dist/stylesheets/style.css': 'dist/stylesheets/style.css'
 				}
-			}
+			},
+            docs: {
+                files: {
+                    'docs/dist/stylesheets/docs.css': 'docs/dist/stylesheets/docs.css'
+                }
+            }
 		},
         clean: {
 			dist: {
@@ -83,21 +88,46 @@ module.exports = function (grunt) {
 						cwd: 'dist/stylesheets/',
 						src: ['*.css'],
 						dest: 'docs/dist/assets/stylesheets/'
-					}
+					},
+                    {
+                        expand: true,
+                        cwd: 'dist/javascripts/',
+                        src: ['*.js'],
+                        dest: 'docs/dist/assets/javascripts/'
+                    }
 				]
 			}
 		},
 		watch: {
-			assemble: {
-				files: ['docs/src/**/*'],
-				tasks: ['assemble', 'copy']
+			hbs: {
+				files: ['docs/src/**/*.hbs'],
+				tasks: ['assemble']
 			},
+            docs: {
+                files: ['docs/src/assets/images/*', 'docs/src/assets/javascripts/*'],
+                tasks: ['copy:docs']
+            },
+            docsass: {
+                files: ['docs/src/assets/stylesheets/*'],
+                tasks: ['sass:docs', 'myth:docs']
+            },
 			sass: {
-				files: ['assets/scss/**/*'],
-				tasks: ['sass', 'copy']
-			}
+				files: ['src/**/*.scss'],
+				tasks: ['compile', 'copy:docs']
+			},
+            js: {
+                files: ['src/**/*.js'],
+                tasks: ['copy:dist', 'copy:docs']
+            }
 		}
 	});
 
-	grunt.registerTask('default', ['clean', 'sass:ui', 'myth', 'assemble', 'copy']);
+    grunt.registerTask('default', ['build']);
+
+	grunt.registerTask('compile', ['sass:dist', 'myth:dist']);
+
+	grunt.registerTask('dist', ['clean:dist', 'copy:dist', 'compile']);
+
+	grunt.registerTask('build', ['dist', 'clean:docs', 'copy:docs', 'sass:docs', 'myth:docs', 'assemble']);
+
 };
