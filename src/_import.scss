@@ -17,6 +17,7 @@
 @import "elements/image/init";
 @import "elements/input/init";
 @import "elements/label/init";
+@import "elements/checkbox/init";
 @import "elements/loader/init";
 @import "elements/progress/init";
 @import "elements/reveal/init";
@@ -27,11 +28,25 @@
     Collections
 ------------------------------------*/
 // @import "collections/breadcrumb/init";
-// @import "collections/form/init";
-// @import "collections/grid/init";
-// @import "collections/menu/init";
-// @import "collections/message/init";
-// @import "collections/table/init";
+@import "collections/form/init";
+@import "collections/grid/init";
+@import "collections/menu/init";
+@import "collections/message/init";
+@import "collections/table/init";
+@import "collections/accordion/init";
+// @import "modules/chatroom/init";
+// @import "modules/dimmer/init";
+@import "collections/dropdown/init";
+@import "collections/modal/init";
+@import "collections/nag/init";
+@import "collections/popup/init";
+// @import "modules/rating/init";
+@import "collections/search/init";
+// @import "modules/shape/init";
+@import "collections/sidebar/init";
+@import "collections/tab/init";
+// @import "modules/transition/init";
+// @import "modules/video/init";
 
 /*------------------------------------
     Views
