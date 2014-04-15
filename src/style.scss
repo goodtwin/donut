@@ -2,6 +2,8 @@
  * Elements
 **/
 $use-button:       true;
+$use-card:         true;
+$use-media:        true;
 $use-divider:      true;
 $use-header:       true;
 $use-icons:        true;
@@ -23,19 +25,6 @@ $use-grid:         true;
 $use-menu:         true;
 $use-message:      true;
 $use-table:        true;
-
-/**
- * Views
-**/
-$use-comment:      true;
-$use-feed:         true;
-$use-item:         true;
-$use-list:         true;
-$use-statistic:    true;
-
-/**
- * Modules
-**/
 $use-accordion:    true;
 $use-chatroom:     true;
 $use-checkbox:     true;
@@ -51,6 +40,15 @@ $use-sidebar:      true;
 $use-tab:          true;
 $use-transition:   true;
 $use-video:        true;
+
+/**
+ * Views
+**/
+$use-comment:      true;
+$use-feed:         true;
+$use-item:         true;
+$use-list:         true;
+$use-statistic:    true;
 
 
 @import "defaults";

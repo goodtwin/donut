@@ -100,7 +100,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: 'dist/javascripts/',
                         src: ['*.js'],
-                        dest: 'docs/dist/assets/javascripts/'
+                        dest: 'docs/dist/assets/javascripts/lib/'
                     }
 				]
 			}
