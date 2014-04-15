@@ -42,7 +42,7 @@ module.exports = function (grunt) {
 			},
             docs: {
                 files: {
-                    'docs/dist/stylesheets/docs.css': 'docs/dist/stylesheets/docs.css'
+                    'docs/dist/assets/stylesheets/docs.css': 'docs/dist/assets/stylesheets/docs.css'
                 }
             }
 		},
