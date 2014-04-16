@@ -53,7 +53,8 @@ module.exports = function (grunt) {
       },
       docs: {
         files: {
-          'docs/dist/assets/stylesheets/docs.css': 'docs/dist/assets/stylesheets/docs.css'
+          'docs/dist/assets/stylesheets/docs.css': 'docs/dist/assets/stylesheets/docs.css',
+          'docs/dist/assets/stylesheets/style.css': 'docs/dist/assets/stylesheets/style.css'
         }
       }
     },
@@ -115,11 +116,11 @@ module.exports = function (grunt) {
       },
       docsass: {
         files: ['docs/src/assets/stylesheets/*'],
-        tasks: ['sass:docs', 'myth:docs']
+        tasks: ['doccss']
       },
       sass: {
         files: ['src/**/*.scss'],
-        tasks: ['compile', 'copy:docs']
+        tasks: ['distcss', 'copy:docs', 'doccss']
       },
       js: {
         files: ['src/**/*.js'],
@@ -129,11 +130,9 @@ module.exports = function (grunt) {
   });
 
 grunt.registerTask('default', ['build']);
-
-grunt.registerTask('compile', ['sass:dist', 'myth:dist']);
-
-grunt.registerTask('dist', ['clean:dist', 'copy:dist', 'compile']);
-
-grunt.registerTask('build', ['dist', 'clean:docs', 'copy:docs', 'sass:docs', 'myth:docs', 'assemble']);
+grunt.registerTask('distcss', ['sass:dist', 'myth:dist']);
+grunt.registerTask('doccss', ['sass:docs', 'myth:docs']);
+grunt.registerTask('dist', ['clean:dist', 'copy:dist', 'distcss']);
+grunt.registerTask('build', ['dist', 'clean:docs', 'copy:docs', 'doccss', 'assemble']);
 
 };
