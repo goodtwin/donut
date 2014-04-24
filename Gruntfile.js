@@ -126,13 +126,22 @@ module.exports = function (grunt) {
         files: ['src/**/*.js'],
         tasks: ['copy:dist', 'copy:docs']
       }
+    },
+    cssmin: {
+      minify: {
+        expand: true,
+        cwd: 'dist/stylesheets/',
+        src: ['*.css', '!*.min.css'],
+        dest: 'dist/stylesheets/',
+        ext: '.min.css'
+      }
     }
   });
 
 grunt.registerTask('default', ['build']);
 grunt.registerTask('distcss', ['sass:dist', 'myth:dist']);
 grunt.registerTask('doccss', ['sass:docs', 'myth:docs']);
-grunt.registerTask('dist', ['clean:dist', 'copy:dist', 'distcss']);
+grunt.registerTask('dist', ['clean:dist', 'copy:dist', 'distcss', 'cssmin']);
 grunt.registerTask('build', ['dist', 'clean:docs', 'copy:docs', 'doccss', 'assemble']);
 
 };
