@@ -27,9 +27,9 @@
  *
  * We work out your end points for you:
  */
-$palm-end:              $lap-start - 1px;
-$lap-end:               $desk-start - 1px;
-$desk-end:              $desk-wide-start - 1px;
+$palm-end:   $lap-start - 1px;
+$lap-end:    $desk-start - 1px;
+$desk-end:   $desk-wide-start - 1px;
 
 @mixin media-query($media-query){
 

@@ -61,7 +61,18 @@ $use-item:         true;
 $use-list:         true;
 $use-statistic:    true;
 
+/**
+* First need to grab our variables.
+* These will override any defaults
+* Set within source.
+**/
+@import "variables/init";
 
-@import "../src/defaults";
+/**
+* Bring in the abstractions
+**/
 @import "../src/import";
-@import "import";
+
+/**
+* Override with our own
+**/
