@@ -85,6 +85,12 @@ module.exports = function (grunt) {
           cwd: 'src/',
           src: ['**/*.js'],
           dest: 'dist/javascripts/'
+        },
+        {
+          expand: true,
+          cwd: 'src/assets',
+          src: ['**/*'],
+          dest: 'dist/assets/'
         }
         ]
       },
@@ -101,6 +107,12 @@ module.exports = function (grunt) {
           cwd: 'dist/javascripts/',
           src: ['*.js'],
           dest: 'docs/dist/assets/javascripts/src/'
+        },
+        {
+          expand: true,
+          cwd: 'dist/assets/',
+          src: ['**/*'],
+          dest: 'docs/dist/assets/assets/'
         }
         ]
       }
