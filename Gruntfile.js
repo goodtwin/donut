@@ -37,7 +37,7 @@ module.exports = function (grunt) {
           sourceComments: 'map',
         },
         files : {
-          'docs/dist/assets/stylesheets/style.css': 'src/style.scss',
+          'docs/dist/assets/stylesheets/style.css': 'style/style.scss',
           'docs/dist/assets/stylesheets/docs.css': 'docs/src/assets/stylesheets/docs.scss'
         }
       }
@@ -93,14 +93,14 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: 'docs/src/assets/',
-          src: ['images/*', 'javascripts/*'],
+          src: ['images/*', 'javascripts/**/*.js'],
           dest: 'docs/dist/assets/'
         },
         {
           expand: true,
           cwd: 'dist/javascripts/',
           src: ['*.js'],
-          dest: 'docs/dist/assets/javascripts/lib/'
+          dest: 'docs/dist/assets/javascripts/src/'
         }
         ]
       }

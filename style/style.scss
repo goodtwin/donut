@@ -1,0 +1,67 @@
+/**
+* This style folder respresents a boilerplate that
+* can be used to utilize Donut UI within a project.
+* In this case the project is the Docs themselves.
+**/
+
+/**
+* The Docs utilize all the default components
+* included in Donut.
+**/
+
+/**
+ * Elements
+**/
+$use-button:       true;
+$use-card:         true;
+$use-media:        true;
+$use-divider:      true;
+$use-header:       true;
+$use-icons:        true;
+$use-image:        true;
+$use-input:        true;
+$use-label:        true;
+$use-loader:       true;
+$use-progress:     true;
+$use-reveal:       true;
+$use-segment:      true;
+$use-step:         true;
+
+/**
+ * Collections
+**/
+$use-breadcrumb:   true;
+$use-form:         true;
+$use-grid:         true;
+$use-menu:         true;
+$use-message:      true;
+$use-table:        true;
+$use-accordion:    true;
+$use-chatroom:     true;
+$use-checkbox:     true;
+$use-dimmer:       true;
+$use-dropdown:     true;
+$use-modal:        true;
+$use-nag:          true;
+$use-popup:        true;
+$use-rating:       true;
+$use-search:       true;
+$use-shape:        true;
+$use-sidebar:      true;
+$use-tab:          true;
+$use-transition:   true;
+$use-video:        true;
+
+/**
+ * Views
+**/
+$use-comment:      true;
+$use-feed:         true;
+$use-item:         true;
+$use-list:         true;
+$use-statistic:    true;
+
+
+@import "../src/defaults";
+@import "../src/import";
+@import "import";
