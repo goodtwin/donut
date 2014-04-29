@@ -44,7 +44,7 @@ module.exports = function (grunt) {
           sourceComments: 'map',
         },
         files : {
-          'dist/style/stylesheets/style.css': 'src/style.scss'
+          'dist/style/stylesheets/style.css': 'style/style.scss'
         }
       },
       docs: {
@@ -52,7 +52,6 @@ module.exports = function (grunt) {
           sourceComments: 'map',
         },
         files : {
-          'dist/docs/assets/stylesheets/style.css': 'style/style.scss',
           'dist/docs/assets/stylesheets/docs.css': 'docs/assets/stylesheets/docs.scss'
         }
       }
@@ -68,8 +67,7 @@ module.exports = function (grunt) {
       },
       docs: {
         files: {
-          'dist/docs/assets/stylesheets/docs.css': 'dist/docs/assets/stylesheets/docs.css',
-          'dist/docs/assets/stylesheets/style.css': 'dist/docs/assets/stylesheets/style.css'
+          'dist/docs/assets/stylesheets/docs.css': 'dist/docs/assets/stylesheets/docs.css'
         }
       }
     },

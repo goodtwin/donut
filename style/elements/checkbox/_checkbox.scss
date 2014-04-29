@@ -1,0 +1,233 @@
+/*******************************
+		Checkbox
+*******************************/
+
+/*--------------
+	Standard
+---------------*/
+
+
+/*--- Content ---*/
+
+.ui.checkbox {
+	min-width: 1em;
+	height: 1.25em;
+	line-height: 1em;
+
+	/*--- Box ---*/
+	.box,
+	label {
+		padding-left: 2em;
+	}
+
+	.box:before,
+	label:before {
+		width: 1em;
+		height: 1em;
+		border-radius: 4px;
+		background: #FFFFFF;
+		border: 1px solid #cecece;
+		transition: background-color 0.3s ease;
+	}
+
+	/*--- Checkbox ---*/
+	.box:after,
+	label:after {
+		width: 0.45em;
+		height: 0.15em;
+		@extend i.icon;
+		@extend i.icon.checkmark:before;
+	}
+
+	/*--- Inside Label ---*/
+	label {
+		color: rgba(0, 0, 0, 0.6);
+		transition: color 0.2s ease;
+
+		&:hover {
+			color: rgba(0, 0, 0, 0.8);
+		}
+	}
+
+	input:focus + label {
+		color: rgba(0, 0, 0, 0.8);
+	}
+
+	/*--- Outside Label  ---*/
+	+ label {
+		cursor: pointer;
+		opacity: 0.85;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+/*******************************
+		States
+*******************************/
+
+
+/*--- Hover ---*/
+.ui.checkbox {
+	/*--- Hover ---*/
+	.box:hover::before,
+	label:hover::before {
+		border: 1px solid rgba(0, 0, 0, 0.3);
+	}
+
+	/*--- Down ---*/
+	.box:active::before,
+	label:active::before {
+		background-color: #F5F5F5;
+	}
+
+	/*--- Focus ---*/
+	input:focus + .box:before,
+	input:focus + label:before {
+		border: 1px solid rgba(0, 0, 0, 0.3);
+	}
+}
+
+
+/*******************************
+		Variations
+*******************************/
+.ui.checkbox {
+	/*--------------
+		Sizes
+	---------------*/
+	font-size: 1em;
+
+	&.large {
+		font-size: 1.25em;
+	}
+	&.huge {
+		font-size: 1.5em;
+	}
+	/*--------------
+		Radio
+	---------------*/
+	&.radio .box:before,
+	&.radio label:before {
+		min-width: 1em;
+		height: 1em;
+	}
+	&.radio .box:after,
+	&.radio label:after {
+		top: 0.2em;
+		left: 0.2em;
+		width: 0.6em;
+		height: 0.6em;
+		background-color: #555555;
+	}
+	/*--------------
+		Slider
+	---------------*/
+	&.slider {
+		cursor: pointer;
+		min-width: 3em;
+
+		/* Line */
+		&:after {
+			top: 0.5em;
+			width: 3em;
+			height: 2px;
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+		/* Button */
+		.box,
+		label {
+			padding-left: 4em;
+
+			&:before {
+				top: -0.25em;
+				width: 1.5em;
+				height: 1.5em;
+				box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+				border-radius: 50rem;
+				transition: left 0.3s ease 0s;
+			}
+
+			/* Button Activation Light */
+			&:after {
+				top: 0.15em;
+				margin-left: 0.375em;
+				width: 0.75em;
+				height: 0.75em;
+				border-radius: 50rem;
+				transition:
+					background 0.3s ease 0s,
+					left 0.3s ease 0s
+				;
+			}
+		}
+
+		/* Selected Slider Toggle */
+		input:checked + .box:before,
+		input:checked + label:before,
+		input:checked + .box:after,
+		input:checked + label:after {
+			left: 1.75em;
+		}
+
+		/* Off Color */
+		.box:after,
+		label:after {
+			background-color: #D95C5C;
+		}
+
+		/* On Color */
+		input:checked + .box:after,
+		input:checked + label:after {
+			background-color: #89B84C;
+		}
+	}
+	/*--------------
+		Toggle
+	---------------*/
+	&.toggle {
+
+		.box,
+		label {
+			padding-left: 4em;
+
+			/* Switch */
+			&:before {
+				top: -0.25em;
+				background-color: #FFFFFF;
+				width: 3em;
+				height: 1.5em;
+				box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+				border-radius: 50rem;
+			}
+
+			/* Activation Light */
+			&:after {
+				top: 0.15em;
+				width: 0.75em;
+				height: 0.75em;
+				background-color: #D95C5C;
+				border-radius: 50rem;
+				transition:
+					background 0.3s ease 0s,
+					left 0.3s ease 0s
+				;
+			}
+		}
+
+		/* Active */
+		&:active .box:before,
+		&:active label:before {
+			background-color: #F5F5F5;
+		}
+
+		/* Active */
+		input:checked + .box:after,
+		input:checked + label:after {
+			background-color: #89B84C;
+		}
+	}
+}
