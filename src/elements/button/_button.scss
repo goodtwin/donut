@@ -286,49 +286,51 @@
   display: block;
   width: 100%;
 }
-.ui.\32.buttons > .button,
-.ui.two.buttons > .button {
-  @extend .one-half;
-}
-.ui.\33.buttons > .button,
-.ui.three.buttons > .button {
-  @extend .one-third;
-}
-.ui.\34.buttons > .button,
-.ui.four.buttons > .button {
-  @extend .one-quarter;
-}
-.ui.\35.buttons > .button,
-.ui.five.buttons > .button {
-  @extend .one-fifth;
-}
-.ui.\36.buttons > .button,
-.ui.six.buttons > .button {
-  @extend .one-sixth;
-}
-.ui.\37.buttons > .button,
-.ui.seven.buttons > .button {
-  @extend .one-seventh;
-}
-.ui.\38.buttons > .button,
-.ui.eight.buttons > .button {
-  @extend .one-eighth;
-}
-.ui.\39.buttons > .button,
-.ui.nine.buttons > .button {
-  @extend .one-ninth;
-}
-.ui.\31\30.buttons > .button,
-.ui.ten.buttons > .button {
-  @extend .one-tenth;
-}
-.ui.\31\31.buttons > .button,
-.ui.eleven.buttons > .button {
-  width: precentage(1/11);
-}
-.ui.\31\32.buttons > .button,
-.ui.twelve.buttons > .button {
-  @extend .one-twelfth;
+.ui.fluid.buttons {
+    &.\32> .button,
+    &.two> .button {
+      @extend .one-half;
+    }
+    &.\33 > .button,
+    &.three > .button {
+      @extend .one-third;
+    }
+    &.\34 > .button,
+    &.four > .button {
+      @extend .one-quarter;
+    }
+    &.\35 > .button,
+    &.five > .button {
+      @extend .one-fifth;
+    }
+    &.\36 > .button,
+    &.six > .button {
+      @extend .one-sixth;
+    }
+    &.\37 > .button,
+    &.seven > .button {
+      @extend .one-seventh;
+    }
+    &.\38 > .button,
+    &.eight > .button {
+      @extend .one-eighth;
+    }
+    &.\39 > .button,
+    &.nine > .button {
+      @extend .one-ninth;
+    }
+    &.\31\30 > .button,
+    &.ten > .button {
+      @extend .one-tenth;
+    }
+    &.\31\31 > .button,
+    &.eleven > .button {
+      width: precentage(1/11);
+    }
+    &.\31\32 > .button,
+    &.twelve > .button {
+      @extend .one-twelfth;
+    }
 }
 
 /* Fluid Vertical Buttons */
