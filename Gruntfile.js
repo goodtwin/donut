@@ -7,19 +7,34 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('./package.json'),
 
     assemble : {
-      options: {
-        assets: 'docs/src/assets',
-        flatten: false,
-        partials: ['docs/src/partials/*.hbs'],
-        layout: 'docs/src/layouts/default.hbs',
-        data: ['docs/src/data/*.{json,yml}']
-      },
-      pages: {
+      docs: {
+        options: {
+          assets: 'docs/assets',
+          flatten: false,
+          partials: ['docs/partials/*.hbs'],
+          layout: 'docs/layouts/default.hbs',
+          data: ['docs/data/*.{json,yml}']
+        },
         files: [{
           expand: true,
-          cwd: 'docs/src/templates/',
+          cwd: 'docs/templates/',
           src: ['**/*.hbs'],
-          dest: 'docs/dist/'
+          dest: 'dist/docs/'
+        }]
+      },
+      mockups: {
+        options: {
+          assets: 'mockups/assets',
+          flatten: false,
+          partials: ['mockups/partials/*.hbs'],
+          layout: 'mockups/layouts/default.hbs',
+          data: ['mockups/data/*.{json,yml}']
+        },
+        files: [{
+          expand: true,
+          cwd: 'mockups/templates/',
+          src: ['**/*.hbs'],
+          dest: 'dist/mockups/'
         }]
       }
     },
@@ -29,7 +44,7 @@ module.exports = function (grunt) {
           sourceComments: 'map',
         },
         files : {
-          'dist/stylesheets/style.css': 'src/style.scss'
+          'dist/style/stylesheets/style.css': 'src/style.scss'
         }
       },
       docs: {
@@ -37,8 +52,8 @@ module.exports = function (grunt) {
           sourceComments: 'map',
         },
         files : {
-          'docs/dist/assets/stylesheets/style.css': 'style/style.scss',
-          'docs/dist/assets/stylesheets/docs.css': 'docs/src/assets/stylesheets/docs.scss'
+          'dist/docs/assets/stylesheets/style.css': 'style/style.scss',
+          'dist/docs/assets/stylesheets/docs.css': 'docs/assets/stylesheets/docs.scss'
         }
       }
     },
@@ -48,13 +63,13 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'dist/stylesheets/style.css': 'dist/stylesheets/style.css'
+          'dist/style/stylesheets/style.css': 'dist/style/stylesheets/style.css'
         }
       },
       docs: {
         files: {
-          'docs/dist/assets/stylesheets/docs.css': 'docs/dist/assets/stylesheets/docs.css',
-          'docs/dist/assets/stylesheets/style.css': 'docs/dist/assets/stylesheets/style.css'
+          'dist/docs/assets/stylesheets/docs.css': 'dist/docs/assets/stylesheets/docs.css',
+          'dist/docs/assets/stylesheets/style.css': 'dist/docs/assets/stylesheets/style.css'
         }
       }
     },
@@ -68,10 +83,10 @@ module.exports = function (grunt) {
         ]
       },
       docs: {
-        files: [
+        files : [
         {
           dot: true,
-          src: ['docs/dist/*']
+          src: ['dist/docs/*']
         }
         ]
       }
@@ -84,13 +99,13 @@ module.exports = function (grunt) {
           flatten: true,
           cwd: 'src/',
           src: ['**/*.js'],
-          dest: 'dist/javascripts/'
+          dest: 'dist/style/javascripts/'
         },
         {
           expand: true,
           cwd: 'src/assets',
           src: ['**/*'],
-          dest: 'dist/assets/'
+          dest: 'dist/style/assets/'
         }
         ]
       },
@@ -100,31 +115,57 @@ module.exports = function (grunt) {
           expand: true,
           cwd: 'docs/src/assets/',
           src: ['images/*', 'javascripts/**/*.js'],
-          dest: 'docs/dist/assets/'
+          dest: 'dist/docs/assets/'
         },
         {
           expand: true,
           cwd: 'dist/javascripts/',
           src: ['*.js'],
-          dest: 'docs/dist/assets/javascripts/src/'
+          dest: 'dist/docs/assets/javascripts/src/'
         },
         {
           expand: true,
           cwd: 'dist/assets/',
           src: ['**/*'],
-          dest: 'docs/dist/assets/assets/'
+          dest: 'dist/docs/assets/assets/'
+        }
+        ]
+      },
+      mockups: {
+        files: [
+        {
+          expand: true,
+          cwd: 'mockups/src/assets/',
+          src: ['images/*', 'javascripts/**/*.js'],
+          dest: 'dist/mockups/assets/'
+        },
+        {
+          expand: true,
+          cwd: 'dist/javascripts/',
+          src: ['*.js'],
+          dest: 'dist/mockups/assets/javascripts/src/'
+        },
+        {
+          expand: true,
+          cwd: 'dist/assets/',
+          src: ['**/*'],
+          dest: 'dist/mockups/assets/assets/'
         }
         ]
       }
     },
     watch: {
       hbs: {
-        files: ['docs/src/**/*.hbs'],
-        tasks: ['assemble']
+        files: ['docs/**/*.hbs'],
+        tasks: ['assemble:docs']
       },
       docs: {
         files: ['docs/src/assets/images/*', 'docs/src/assets/javascripts/*'],
         tasks: ['copy:docs']
+      },
+      mockups: {
+        files: ['mockups/**/*.hbs'],
+        tasks: ['assemble:mockups']
       },
       docsass: {
         files: ['docs/src/assets/stylesheets/*'],
@@ -142,9 +183,9 @@ module.exports = function (grunt) {
     cssmin: {
       minify: {
         expand: true,
-        cwd: 'dist/stylesheets/',
+        cwd: 'dist/style/stylesheets/',
         src: ['*.css', '!*.min.css'],
-        dest: 'dist/stylesheets/',
+        dest: 'dist/style/stylesheets/',
         ext: '.min.css'
       }
     }
@@ -154,6 +195,6 @@ grunt.registerTask('default', ['build']);
 grunt.registerTask('distcss', ['sass:dist', 'myth:dist']);
 grunt.registerTask('doccss', ['sass:docs', 'myth:docs']);
 grunt.registerTask('dist', ['clean:dist', 'copy:dist', 'distcss', 'cssmin']);
-grunt.registerTask('build', ['dist', 'clean:docs', 'copy:docs', 'doccss', 'assemble']);
+grunt.registerTask('build', ['clean', 'dist', 'clean:docs', 'copy:docs', 'doccss', 'assemble']);
 
 };
