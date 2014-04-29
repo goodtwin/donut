@@ -51,25 +51,30 @@
     Collections
 ------------------------------------*/
 // @import "collections/breadcrumb/init";
-@import "collections/form/init";
 @import "collections/grid/init";
-@import "collections/menu/init";
-@import "collections/message/init";
 @import "collections/table/init";
 @import "collections/accordion/init";
+@import "collections/card/init";
+@import "collections/tab/init";
 // @import "modules/chatroom/init";
 // @import "modules/dimmer/init";
-@import "collections/dropdown/init";
-@import "collections/modal/init";
-@import "collections/nag/init";
-@import "collections/popup/init";
 // @import "modules/rating/init";
-@import "collections/search/init";
 // @import "modules/shape/init";
-@import "collections/sidebar/init";
-@import "collections/tab/init";
 // @import "modules/transition/init";
 // @import "modules/video/init";
+
+/*------------------------------------
+    Containers
+------------------------------------*/
+@import "containers/form/init";
+@import "containers/sidebar/init";
+@import "containers/modal/init";
+@import "containers/menu/init";
+@import "containers/message/init";
+@import "containers/dropdown/init";
+@import "containers/nag/init";
+@import "containers/popup/init";
+@import "containers/search/init";
 
 /*------------------------------------
     Views

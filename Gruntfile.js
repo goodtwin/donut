@@ -131,7 +131,7 @@ module.exports = function (grunt) {
         tasks: ['doccss']
       },
       sass: {
-        files: ['src/**/*.scss'],
+        files: ['src/**/*.scss', 'style/**/*.scss'],
         tasks: ['distcss', 'copy:docs', 'doccss']
       },
       js: {
