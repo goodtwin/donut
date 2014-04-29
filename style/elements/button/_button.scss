@@ -1,0 +1,287 @@
+/*******************************
+			Button
+*******************************/
+.ui.button {
+	background-color: #CCC;
+	color: #808080;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-style: normal;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*******************************
+			States
+*******************************/
+.ui.button {
+	/*--------------
+		Active
+	---------------*/
+	&.active{
+		background-color: #EAEAEA;
+	}
+	/*--------------
+		Hover
+	---------------*/
+	&:hover,
+	&.active:hover  {
+		color: rgba(0, 0, 0, 0.7);
+	}
+	/*--------------
+		Down
+	---------------*/
+	&:active,
+	&.active:active {
+		background-color: #F1F1F1;
+		color: rgba(0, 0, 0, 0.7);
+	}
+	/*--------------
+		Loading
+	---------------*/
+	&.loading {
+		position: relative;
+		cursor: default;
+		background-color: #FFFFFF !important;
+		color: transparent !important;
+		transition: all 0s linear;
+
+		&:after {
+			position: absolute;
+			top: 0em;
+			left: 0em;
+			width: 100%;
+			height: 100%;
+			content: '';
+			background: transparent url(../assets/images/loader-mini.gif) no-repeat 50% 50%;
+		}
+
+		&.labeled.icon .icon {
+			background-color: transparent;
+			box-shadow: none;
+		}
+	}
+	/*-------------------
+		Disabled
+	--------------------*/
+	&.disabled,
+	&.disabled:hover,
+	&.disabled.active {
+		background-color: #DDDDDD !important;
+		cursor: default;
+		color: rgba(0, 0, 0, 0.5) !important;
+		opacity: 0.3 !important;
+	}
+}
+
+/*******************************
+			Types
+*******************************/
+.ui.button {
+	/*-------------------
+		Primary
+	--------------------*/
+	&.primary {
+		background-color: #D95C5C;
+		color: #FFFFFF;
+
+		&:hover,
+		&.active {
+			background-color: #E75859;
+		}
+
+		&:active {
+			background-color: #D24B4C;
+		}
+	}
+	/*-------------------
+		Secondary
+	--------------------*/
+	&.secondary {
+		background-color: #00B5AD;
+		color: #FFFFFF;
+
+		&:hover,
+		&.active {
+			background-color: #009A93;
+		}
+
+		&:active {
+			background-color: #00847E;
+		}
+	}
+	/*-------------------
+		Social
+	--------------------*/
+	/* Facebook */
+	&.facebook {
+		background-color: #3B579D;
+		color: #FFFFFF;
+
+		&:hover {
+			background-color: #3A59A9;
+		}
+
+		&:active {
+			background-color: #334F95;
+		}
+	}
+
+	/* Twitter */
+	&.twitter {
+		background-color: #4092CC;
+		color: #FFFFFF;
+
+		&:hover {
+			background-color: #399ADE;
+			color: #FFFFFF;
+		}
+
+		&:active {
+			background-color: #3283BC;
+			color: #FFFFFF;
+		}
+	}
+
+	/* Google Plus */
+	&.google.plus {
+		background-color: #D34836;
+		color: #FFFFFF;
+
+		&:hover {
+			background-color: #E3432E;
+		}
+
+		&:active {
+			background-color: #CA3A27;
+		}
+	}
+
+	/* LinkedIn */
+	&.linkedin {
+		background-color: #1F88BE;
+		color: #FFFFFF;
+
+		&:hover {
+			background-color: #1394D6;
+		}
+
+		&:active {
+			background-color: #1179AE;
+		}
+	}
+
+	/* YouTube */
+	&.youtube {
+		background-color: #CC181E;
+		color: #FFFFFF;
+
+		&:hover {
+			background-color: #DF0209;
+		}
+
+		&:active {
+			background-color: #A50006;
+		}
+	}
+
+	/* Instagram */
+	&.instagram {
+		background-color: #49769C;
+		color: #FFFFFF;
+
+		&:hover {
+			background-color: #4781B1;
+		}
+
+		&:active {
+			background-color: #38658A;
+		}
+	}
+
+	/* Pinterest */
+	&.pinterest {
+		background-color: #00ACED;
+		color: #FFFFFF;
+
+		&:hover {
+			background-color: #00B9FF;
+		}
+
+		&:active {
+			background-color: #009EDA;
+		}
+	}
+	/*--------------
+		Icon
+	---------------*/
+	> .icon {
+		margin-right: 0.6em;
+	}
+}
+
+/*******************************
+		Variations
+*******************************/
+.ui.button, .ui.buttons {
+	/*-------------------
+			Sizes
+	--------------------*/
+	font-size: 1rem;
+
+	&.mini,
+	&.mini .button {
+		font-size: 0.8rem;
+	}
+
+	&.tiny,
+	&.tiny .button {
+		font-size: 0.875em;
+	}
+
+	&.small,
+	&.small .button {
+		font-size: 0.875rem;
+	}
+
+	&.large,
+	&.large .button {
+		font-size: 1.125rem;
+	}
+
+	&.big,
+	&.big .button {
+		font-size: 1.25rem;
+	}
+
+	&.huge,
+	&.huge .button {
+		font-size: 1.375rem;
+	}
+
+	&.massive,
+	&.massive .button {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	/*--------------
+		Toggle
+	---------------*/
+	/* Toggle (Modifies active state to give affordances) */
+	&.toggle .active.button,
+	&.toggle.active {
+		background-color: #5BBD72 !important;
+		color: #FFFFFF !important;
+
+		&:hover {
+			background-color: #58CB73 !important;
+		}
+	}
+	/*--------------
+	Labeled Icon
+	---------------*/
+	&.labeled.icon > .button > .icon,
+	&.labeled.icon > .icon {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+}
