@@ -1,7 +1,6 @@
 /*global module, require*/
 module.exports = function (grunt) {
   'use strict';
-  require('matchdep').filterDev('*').forEach(grunt.loadNpmTasks);
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('./package.json'),
@@ -176,6 +175,9 @@ module.exports = function (grunt) {
       }
     }
   });
+
+require('load-grunt-tasks')(grunt);
+grunt.loadNpmTasks('assemble');
 
 grunt.registerTask('default', ['build']);
 grunt.registerTask('distcss', ['sass:dist', 'myth:dist']);
