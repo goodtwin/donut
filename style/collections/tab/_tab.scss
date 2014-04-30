@@ -1,0 +1,20 @@
+/*--------------------
+	Loading
+---------------------*/
+
+.ui.tab.loading {
+	min-height: 250px;
+	text-indent: -10000px;
+}
+.ui.tab.loading * {
+	left: -10000px !important;
+}
+.ui.tab.loading:after {
+	top: 50px;
+	content: 'Loading...';
+	margin-left: -32px;
+	text-indent: 5px;
+	color: rgba(0, 0, 0, 0.4);
+	padding-top: 75px;
+	background: url(../assets/images/loader-large.gif) no-repeat 0px 0px;
+}
