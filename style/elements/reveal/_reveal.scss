@@ -1,0 +1,54 @@
+.ui.reveal > .content {
+	font-size: 1rem !important;
+}
+
+.ui.reveal > .visible.content {
+	transition: all 0.8s cubic-bezier(0.175, 0.885, 0.320, 1) 0.15s;
+}
+
+.ui.reveal > .visible.content {
+	transition: all 0.8s cubic-bezier(0.175, 0.885, 0.320, 1) 0.15s;
+}
+
+/*******************************
+			Types
+*******************************/
+
+
+/*--------------
+	Slide
+---------------*/
+
+.ui.slide.reveal > .content {
+	transition:
+		top 0.8s cubic-bezier(0.175, 0.885, 0.320, 1) 0.15s,
+		left 0.8s cubic-bezier(0.175, 0.885, 0.320, 1) 0.15s,
+		right 0.8s cubic-bezier(0.175, 0.885, 0.320, 1) 0.15s,
+		bottom 0.8s cubic-bezier(0.175, 0.885, 0.320, 1) 0.15s
+	;
+}
+
+/*--------------
+	Rotate
+---------------*/
+
+.ui.rotate.reveal > .visible.content {
+	transition-duration: 0.8s;
+	transform: rotate(0deg);
+}
+
+.ui.rotate.reveal > .visible.content,
+.ui.rotate.right.reveal > .visible.content {
+	transform-origin: bottom right;
+}
+.ui.rotate.reveal:hover > .visible.content,
+.ui.rotate.right.reveal:hover > .visible.content {
+	transform: rotate(110deg);
+}
+
+.ui.rotate.left.reveal > .visible.content {
+	transform-origin: bottom left;
+}
+.ui.rotate.left.reveal:hover > .visible.content {
+	transform: rotate(-110deg);
+}
