@@ -7,7 +7,6 @@ semantic.accordion.ready = function() {
   var
     $accordion     = $('.ui.accordion'),
     $menuAccordion = $('.ui.menu.accordion'),
-    $checkbox      = $('.ui.checkbox'),
     // alias
     handler
   ;
@@ -18,9 +17,6 @@ semantic.accordion.ready = function() {
     .accordion({
      exclusive: false
     })
-  ;
-  $checkbox
-    .checkbox()
   ;
 
 };
