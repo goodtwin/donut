@@ -1,0 +1,153 @@
+/*******************************
+			Segment
+*******************************/
+
+.ui.segment {
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+	margin: 1em 0em;
+	padding: 1em;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.ui.vertical.segment {
+	background-color: transparent;
+	border-radius: 0px;
+	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.ui.horizontal.segment {
+	background-color: transparent;
+	border-radius: 0px;
+	box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+/*-------------------
+	Loose Coupling
+--------------------*/
+
+.ui.pointing.menu + .ui.attached.segment {
+	top: 1px;
+}
+
+.ui.page.grid.segment
+.ui.grid .ui.segment.column {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.ui.grid.segment,
+.ui.grid .ui.segment.row,
+.ui.grid .ui.segment.column {
+	border-radius: 0em;
+	box-shadow: none;
+	border: none;
+}
+
+/*******************************
+			Types
+*******************************/
+
+/*-------------------
+	Circular
+--------------------*/
+
+.ui.circular.segment {
+	padding: 2em;
+}
+
+/*-------------------
+	Raised
+--------------------*/
+
+.ui.raised.segment {
+	box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+/*******************************
+			States
+*******************************/
+
+.ui.disabled.segment {
+	opacity: 0.8;
+	color: #DDDDDD;
+}
+
+/*******************************
+		Variations
+*******************************/
+
+/*-------------------
+	Inverted
+--------------------*/
+
+.ui.inverted.segment {
+	border: none;
+	box-shadow: none;
+}
+.ui.inverted.segment .segment {
+	color: rgba(0, 0, 0, 0.7);
+}
+.ui.inverted.segment .inverted.segment {
+	color: #FFFFFF;
+}
+.ui.inverted.segment,
+.ui.primary.inverted.segment {
+	background-color: #222222;
+	color: #FFFFFF;
+}
+
+/*-------------------
+	Ordinality
+--------------------*/
+
+.ui.primary.segment {
+	background-color: #FFFFFF;
+	color: #555555;
+}
+
+.ui.secondary.segment {
+	background-color: #FAF9FA;
+	color: #777777;
+}
+
+.ui.tertiary.segment {
+	background-color: #EBEBEB;
+	color: #B0B0B0;
+}
+
+.ui.secondary.inverted.segment {
+	background-color: #555555;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+	color: #FAFAFA;
+}
+.ui.tertiary.inverted.segment {
+	background-color: #555555;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
+	color: #EEEEEE;
+}
+
+/*-------------------
+	Attached
+--------------------*/
+
+.ui.segment.attached {
+	top: -1px;
+	bottom: -1px;
+	box-shadow: 0px 0px 0px 1px #DDDDDD;
+}
+
+.ui.top.attached.segment {
+	top: 0px;
+	bottom: -1px;
+	margin-top: 1em;
+	margin-bottom: 0em;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.ui.segment.bottom.attached {
+	top: -1px;
+	bottom: 0px;
+	margin-top: 0em;
+	margin-bottom: 1em;
+	border-radius: 0px 0px 5px 5px;
+}
