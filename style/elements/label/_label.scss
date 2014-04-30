@@ -1,0 +1,337 @@
+/*******************************
+			Label
+*******************************/
+
+.ui.label {
+	margin: -0.25em 0.25em 0em;
+	background-color: #E8E8E8;
+	border-color: #E8E8E8;
+	padding: 0.5em 0.8em;
+	color: rgba(0, 0, 0, 0.65);
+	text-transform: uppercase;
+	font-weight: normal;
+	border-radius: 0.325em;
+	transition: background 0.1s linear;
+}
+
+/* Inside Link */
+.ui.label a {
+	color: inherit;
+	opacity: 0.8;
+	transition: 0.2s opacity ease;
+}
+
+/* Detail */
+.ui.label .detail {
+	margin-left: 0.5em;
+	font-weight: bold;
+	opacity: 0.8;
+}
+
+/* Removable label */
+.ui.label .delete.icon {
+	margin: 0em 0em 0em 0.5em;
+	opacity: 0.7;
+	transition: background 0.1s linear;
+}
+
+/*-------------------
+	Coupling
+--------------------*/
+
+/* Padding on next content after a label */
+.ui.segment > .attached.label:first-child + * {
+	margin-top: 2.5em;
+}
+.ui.segment > .bottom.attached.label:first-child ~ :last-child {
+	margin-bottom: 2.5em;
+}
+
+/*******************************
+			Types
+*******************************/
+
+.ui.image.label {
+	margin-top: 0em;
+	margin-bottom: 0em;
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+	line-height: 1.5em;
+	text-transform: none;
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+
+	img {
+		height: 2.25em;
+		margin: -0.4em 0.8em -0.4em -0.8em;
+		border-radius: 0.325em 0em 0em 0.325em;
+	}
+}
+
+/*******************************
+			States
+*******************************/
+
+/*-------------------
+	Disabled
+--------------------*/
+
+.ui.label.disabled {
+	opacity: 0.5;
+}
+
+
+/*-------------------
+		Hover
+--------------------*/
+
+a.ui.labels .label:hover,
+a.ui.label:hover {
+	background-color: #E0E0E0;
+	border-color: #E0E0E0;
+	color: rgba(0, 0, 0, 0.7);
+
+	&:before {
+		background-color: #E0E0E0;
+		color: rgba(0, 0, 0, 0.7);
+	}
+}
+
+/*******************************
+		Variations
+*******************************/
+
+
+/*-------------------
+		Tag
+--------------------*/
+
+.ui.tag.labels .label,
+.ui.tag.label {
+	margin-left: 1em;
+	padding: 0.33em 1.3em 0.33em 1.4em;
+	border-radius: 0px 3px 3px 0px;
+
+	&:before {
+		top: 0.3em;
+		left: 0.3em;
+		margin-left: -1em;
+		width: 1.5em;
+		height: 1.5em;
+		transform: rotate(45deg);
+		transition: background 0.1s linear;
+	}
+
+	&:after {
+		left: -0.25em;
+		margin-top: -0.3em;
+		background-color: #FFFFFF;
+		width: 0.55em;
+		height: 0.55em;
+		box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+		border-radius: 100px 100px 100px 100px;
+	}
+}
+
+/*-------------------
+	Ribbon
+--------------------*/
+
+.ui.ribbon.label {
+	margin: 0em 0.2em;
+	left: -2rem;
+	padding-left: 2rem;
+	border-radius: 0px 4px 4px 0px;
+	border-color: rgba(0, 0, 0, 0.15);
+
+	&:after {
+		border-right-width: 1em;
+		border-right-color: inherit;
+		border-bottom: 1em solid transparent;
+	}
+}
+
+/*-------------------
+	Attached
+--------------------*/
+
+.ui.top.attached.label,
+.ui.attached.label {
+	padding: 0.75em 1em;
+	border-radius: 4px 4px 0em 0em;
+}
+.ui.bottom.attached.label {
+	border-radius: 0em 0em 4px 4px;
+}
+
+.ui.top.left.attached.label {
+	border-radius: 4px 0em 4px 0em;
+}
+
+.ui.top.right.attached.label {
+	border-radius: 0em 4px 0em 4px;
+}
+.ui.bottom.left.attached.label {
+	border-radius: 4px 0em 0em 4px;
+}
+.ui.bottom.right.attached.label {
+	border-radius: 4px 0em 4px 0em;
+}
+
+/*-------------------
+	Corner Label
+--------------------*/
+
+.ui.corner.label {
+	width: 3em;
+	height: 3em;
+	transition: color 0.2s ease;
+
+	&:after {
+		border-right: 3em solid transparent;
+		border-bottom: 3em solid transparent;
+		border-right-color: inherit;
+		transition: border-color 0.2s ease;
+	}
+}
+
+.ui.corner.label .icon {
+	font-size: 0.875em;
+	margin: 0.5em 0em 0em 1.25em;
+}
+.ui.corner.label .text {
+	font-weight: bold;
+	margin: 0.5em 0em 0em 1em;
+	width: 2.5em;
+	font-size: 0.875em;
+	transform: rotate(45deg);
+}
+
+/* Left Corner */
+.ui.left.corner.label:after {
+	border-top: 3em solid transparent;
+	border-right: 3em solid transparent;
+	border-top-color: inherit;
+}
+.ui.left.corner.label .icon {
+	margin: 0.5em 0em 0em -1em;
+}
+.ui.left.corner.label .text {
+	margin: 0.5em 0em 0em -1em;
+	transform: rotate(-45deg);
+}
+
+/* Hover */
+.ui.corner.label:hover {
+background-color: transparent;
+}
+
+/*-------------------
+	Inverted
+--------------------*/
+
+.ui.inverted.labels .label,
+.ui.inverted.label {
+	color: #FFFFFF !important;
+}
+
+/*-------------------
+	Horizontal
+--------------------*/
+
+.ui.horizontal.labels .label,
+.ui.horizontal.label {
+	margin: -0.125em 0.5em -0.125em 0em;
+	padding: 0.35em 1em;
+	min-width: 6em;
+}
+
+/*-------------------
+	Circular
+--------------------*/
+
+.ui.circular.labels .label,
+.ui.circular.label {
+	min-height: 1em;
+	max-height: 2em;
+	padding: 0.5em !important;
+	line-height: 1em;
+}
+
+/*-------------------
+	Pointing
+--------------------*/
+
+.ui.pointing.label:before {
+	width: 0.6em;
+	height: 0.6em;
+	transform: rotate(45deg);
+	transition: background 0.1s linear;
+}
+/*--- Above ---*/
+.ui.pointing.label:before {
+	background-color: #E8E8E8;
+}
+.ui.pointing.label,
+.ui.pointing.above.label {
+	margin-top: 1em;
+}
+.ui.pointing.label:before,
+.ui.pointing.above.label:before {
+	margin-left: -0.3em;
+	top: -0.3em;
+}
+/*--- Below ---*/
+.ui.pointing.below.label {
+	margin-bottom: 1em;
+
+	&:before {
+		margin-left: -0.3em;
+		bottom: -0.3em;
+	}
+}
+/*--- Left ---*/
+.ui.pointing.left.label {
+	margin-left: 1em;
+
+	&:before {
+		margin-top: -0.3em;
+	}
+}
+/*--- Right ---*/
+.ui.pointing.right.label {
+	margin-right: 1em;
+
+	&:before {
+		margin-top: -0.3em;
+		right: -0.3em;
+	}
+}
+
+/*------------------
+Floating Label
+-------------------*/
+
+.ui.floating.label {
+	top: -1em;
+	margin: 0em 0em 0em -1.5em !important;
+}
+
+/*-------------------
+		Sizes
+--------------------*/
+
+.ui.small.labels .label,
+.ui.small.label {
+	font-size: 0.75rem;
+}
+.ui.label {
+	font-size: 0.8125rem;
+}
+.ui.large.labels .label,
+.ui.large.label {
+	font-size: 0.875rem;
+}
+.ui.huge.labels .label,
+.ui.huge.label {
+	font-size: 1rem;
+}
