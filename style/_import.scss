@@ -39,12 +39,12 @@
 /*------------------------------------
 	Containers
 ------------------------------------*/
-@import "containers/form/init";
-//@import "containers/sidebar/init";
-//@import "containers/modal/init";
-//@import "containers/menu/init";
-@import "containers/message/init";
 //@import "containers/dropdown/init";
-//@import "containers/nag/init";
+@import "containers/form/init";
+@import "containers/menu/init";
+@import "containers/message/init";
+//@import "containers/modal/init";
+@import "containers/nag/init";
 //@import "containers/popup/init";
 //@import "containers/search/init";
+//@import "containers/sidebar/init";
