@@ -1,0 +1,111 @@
+/*******************************
+		Media
+*******************************/
+
+
+/* Media */
+.ui.media {
+	padding: 1em;
+}
+.ui.media:first-child {
+	border-top: 0px;
+}
+.ui.media:last-child {
+	margin-bottom: 1em;
+}
+
+/*******************************
+			Content
+*******************************/
+
+/* Media Label */
+.ui.media .label {
+	width: 3em;
+	vertical-align: top;
+	text-align: left;
+}
+.ui.media .label .icon {
+	font-size: 1.5em;
+	padding: 0.5em;
+	margin: 0em;
+}
+.ui.media .label img {
+	width: 3em;
+	margin: 0em;
+	border-radius: 50em;
+}
+.ui.media .label + .content {
+	padding: 0.75em 1em 0em;
+}
+
+/* Content */
+.ui.media .content {
+	vertical-align: top;
+	text-align: left;
+}
+
+/* Date */
+.ui.media .content .date {
+	float: right;
+	padding-left: 1em;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+/* Summary */
+.ui.media .content .summary {
+	color: rgba(0, 0, 0, 0.75);
+}
+.ui.media .content .summary img {
+	margin-right: 0.25em;
+	width: 4em;
+	border-radius: 500px;
+}
+
+/* Additional Information */
+.ui.media .content .extra {
+	margin: 1em 0em 0em;
+	padding: 0.5em 0em 0em;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.ui.media .content .extra.images {
+
+}
+.ui.media .content .extra.images img {
+	margin-right: 0.25em;
+	width: 6em;
+}
+
+.ui.media .content .extra.text {
+	padding: 0.5em 1em;
+	border-left: 0.2em solid rgba(0, 0, 0, 0.1);
+}
+
+/*******************************
+			Variations
+*******************************/
+
+.ui.small.media {
+	font-size: 0.875em;
+}
+.ui.small.media .label img {
+	width: 2.5em;
+}
+.ui.small.media .label .icon {
+	font-size: 1.25em;
+}
+.ui.media {
+	padding: 0.75em 0em;
+}
+.ui.small.media .label + .content {
+	padding: 0.5em 0.5em 0;
+}
+.ui.small.media .content .extra.images img {
+	width: 5em;
+}
+.ui.small.media .content .extra {
+	margin: 0.5em 0em 0em;
+}
+.ui.small.media .content .extra.text {
+	padding: 0.25em 0.5em;
+}

@@ -1,0 +1,57 @@
+/*
+ * # Media Element
+ * http://github.com/jlukic/semantic-ui/
+ *
+ *
+ * Copyright 2013 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ * Released: May 22, 2013
+ */
+
+
+/*******************************
+         Media
+*******************************/
+
+
+/* Media */
+.ui.media {
+  width: 100%;
+  display: table;
+}
+
+/*******************************
+			Content
+*******************************/
+
+/* Media Label */
+.ui.media .label {
+  display: table-cell;
+}
+
+/* Content */
+.ui.media .content {
+  display: table-cell;
+  word-wrap: break-word;
+}
+
+/* Summary */
+.ui.media .content .summary img {
+  display: inline-block;
+}
+
+/* Additional Information */
+.ui.media .content .extra.images {
+
+}
+.ui.media .content .extra.images img {
+  display: inline-block;
+}
+
+
+
+/*******************************
+            Variations
+*******************************/
