@@ -33,17 +33,12 @@
         Content
 ---------------------*/
 
-.ui.form > p {
-  margin: 1em 0;
-}
-
 /*--------------------
         Field
 ---------------------*/
 
 .ui.form .field {
   clear: both;
-  margin: 0em 0em 1em;
 }
 
 /*--------------------
@@ -51,9 +46,7 @@
 ---------------------*/
 
 .ui.form .field > label {
-  margin: 0em 0em 0.3em;
   display: block;
-  font-size: 0.875em;
 }
 
 /*--------------------
@@ -81,20 +74,7 @@
 .ui.form input[type="number"],
 .ui.form input[type="url"],
 .ui.form input[type="tel"] {
-  margin: 0em;
-  padding: 0.85em 1.2em;
-  font-size: 0.875em;
   outline: none;
-  box-sizing: border-box;
-}
-
-.ui.textarea,
-.ui.form textarea {
-  line-height: 1.33;
-  min-height: 8em;
-  height: 12em;
-  max-height: 24em;
-  resize: vertical;
 }
 
 .ui.form textarea,
@@ -108,7 +88,6 @@
 
 .ui.form .divider {
   clear: both;
-  margin: 1em 0em;
 }
 
 
@@ -134,12 +113,8 @@
 .ui.form .field .prompt.label {
   white-space: nowrap;
 }
-.ui.form .inline.field .prompt {
-  margin-top: 0em;
-  margin-left: 1em;
-}
+
 .ui.form .inline.field .prompt:before {
-  margin-top: -0.3em;
   bottom: auto;
   right: auto;
   top: 50%;
