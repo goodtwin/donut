@@ -1,0 +1,188 @@
+/*--------------
+	Cards
+---------------*/
+
+.ui.cards {
+	margin: 1em 0em 0em;
+}
+.ui.cards:first-child {
+	margin-top: 0em;
+}
+.ui.cards:last-child {
+	margin-bottom: -1em;
+}
+
+/*--------------
+	Card
+---------------*/
+
+.ui.card {
+	top: 0px;
+	width: 316px;
+	min-height: 375px;
+	margin: 0em 0.5em 2.5em;
+	padding: 0em;
+	background-color: #FFFFFF;
+	line-height: 1.2;
+	font-size: 1em;
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+	border-bottom: 0.2em solid rgba(0, 0, 0, 0.2);
+	border-radius: 0.33em;
+	transition: box-shadow 0.2s ease;
+}
+
+/*--------------
+	Images
+---------------*/
+
+.ui.card > .image {
+	background-color: rgba(0, 0, 0, 0.05);
+	border-radius: 0.2em;
+}
+
+/*--------------
+	Content
+---------------*/
+.ui.card > .content {
+	padding: 0.75em 0.5em;
+}
+.ui.card > .content > .name {
+	font-size: 1.25em;
+	font-weight: bold;
+	margin-bottom: 0.2em;
+	color: rgba(0, 0, 0, 0.7);
+}
+.ui.card > .content > .description {
+	color: rgba(0, 0, 0, 0.45);
+}
+.ui.card > .content > .description p {
+	margin: 0em 0em 0.2em;
+}
+
+/*--------------
+	Meta
+---------------*/
+
+.ui.card .meta {
+	float: right;
+	color: rgba(0, 0, 0, 0.35);
+}
+.ui.card > .content > .meta + .name {
+	float: left;
+}
+
+/*--------------
+	Labels
+---------------*/
+
+/*-----star----- */
+
+/* hover */
+.ui.card .star.label:hover::after {
+	border-right-color: #F6EFC3;
+}
+.ui.card .star.label:hover::after {
+	border-top-color: #F6EFC3;
+}
+.ui.card .star.label:hover .icon {
+	color: #AC9400
+}
+
+/* active */
+.ui.card .star.label.active::after {
+	border-right-color: #F6EFC3;
+}
+.ui.card .star.label.active::after {
+	border-top-color: #F6EFC3;
+}
+.ui.card .star.label.active .icon {
+	color: #AC9400
+}
+
+/*-----like----- */
+
+/* hover */
+.ui.card .like.label:hover::after {
+	border-right-color: #F5E1E2;
+}
+.ui.card .like.label.active::after {
+	border-top-color: #F5E1E2;
+}
+.ui.card .like.label:hover .icon {
+	color: #EF404A
+}
+/* active */
+.ui.card .like.label.active::after {
+	border-right-color: #F5E1E2;
+}
+.ui.card .like.label.active::after {
+	border-top-color: #F5E1E2;
+}
+.ui.card .like.label.active .icon {
+	color: #EF404A
+}
+
+/*--------------
+	Extra
+---------------*/
+
+.ui.card .extra {
+	padding: 0em 0.5em;
+	bottom: -2em;
+	left: 0em;
+	height: 1.5em;
+	color: rgba(0, 0, 0, 0.25);
+	transition: color 0.2s ease;
+}
+.ui.card .extra > img {
+	border-radius: 500px 500px 500px 500px;
+	margin-right: 0.25em;
+	width: 2em;
+}
+
+/*******************************
+		States
+*******************************/
+
+.ui.card:hover {
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+.ui.card:hover .extra {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+/*******************************
+		Variations
+*******************************/
+
+
+/*--------------
+	Connected
+---------------*/
+
+.ui.connected.cards .card {
+	height: auto;
+	border-radius: 0px;
+	margin: 0em;
+	width: 33.33%;
+}
+
+/* Borders */
+.ui.connected.cards > .card,
+.ui.connected.cards > .row:last-child > .card {
+	border-bottom: 0.2em solid rgba(0, 0, 0, 0.2);
+}
+.ui.connected.cards > .row:last-child > .card:first-child,
+.ui.connected.cards > .card:first-child {
+	border-radius: 0em 0em 0em 0.33em;
+}
+.ui.connected.cards > .row:last-child > .card:last-child,
+.ui.connected.cards > .card:last-child {
+	border-radius: 0em 0em 0.33em 0em;
+}
+
+
+/* Hover */
+.ui.connected.cards .card:hover {
+	border-bottom-width: 0.2em;
+}
