@@ -6,6 +6,10 @@
  * heading hierarchy.
  */
 @mixin initialize-font-size(){
+  html, body {
+    font-size: $base-font-size;
+  }
+
   h1,.alpha{
       @include font-size($h1-size);
   }
