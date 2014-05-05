@@ -1,0 +1,53 @@
+/*
+ * # Semantic - Sidebar
+ * http://github.com/jlukic/semantic-ui/
+ *
+ *
+ * Copyright 2013 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*******************************
+            Sidebar
+*******************************/
+
+.ui.sidebar {
+  border-radius: 0px !important;
+  transition:
+    margin-left 0.3s ease,
+    margin-top 0.3s ease;
+}
+
+/*******************************
+           Variations
+*******************************/
+
+/*-------------------
+      Formatted
+--------------------*/
+
+.ui.styled.sidebar {
+  background-color: #FFFFFF;
+  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+/*-------------------
+       Floating
+--------------------*/
+
+.ui.floating.sidebar {
+  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ui.right.floating.sidebar {
+  box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ui.top.floating.sidebar {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ui.bottom.floating.sidebar {
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.2);
+}
