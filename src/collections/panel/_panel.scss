@@ -1,0 +1,164 @@
+/*******************************
+            Panels
+*******************************/
+.ui.panels {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .panel {
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+  }
+  > div {
+    height: 100%;
+  }
+  .panel > .containment {
+    position: relative;
+    height: 100%;
+  }
+}
+
+/*-------------------
+      Types
+--------------------*/
+.ui.panels {
+
+  &.two, &.three {
+
+    .right.panel, .left.panel {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      overflow:hidden;
+      z-index: 1;
+    }
+    .right.panel {
+      right: 0;
+      text-align: left;
+    }
+    .left.panel {
+      left: 0;
+    }
+    .middle.panel {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+}
+
+/*-------------------
+      Coupling
+--------------------*/
+html.panelable,
+html.panelable > body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*-------------------
+      States
+--------------------*/
+.ui.panels {
+
+  .left.panel, .right.panel {
+    width: 240px;
+    transition: all 0.3s ease-in-out;
+  }
+  .middle.panel {
+    transition: all 0.3s ease-in-out;
+  }
+  .left.panel {
+    transform: translate( -240px );
+  }
+  .right.panel {
+    transform: translate( 240px );
+  }
+  &.opened-left {
+
+    .left.panel {
+      transform: translate( 0 ) !important;
+    }
+    .middle.panel {
+      padding-left: 240px !important;
+    }
+  }
+  &.opened-right {
+
+    .right.panel {
+      transform: translate( 0 ) !important;
+    }
+    .middle.panel {
+      padding-right: 240px !important;
+    }
+  }
+}
+
+/*-------------------
+      Variations
+--------------------*/
+.ui.panels {
+
+  &.large-left {
+
+    .left.panel {
+      width: 280px;
+      transform: translate( -280px );
+    }
+    &.opened-left .middle.panel {
+      padding-left: 280px !important;
+    }
+  }
+  &.large-right {
+
+    .right.panel {
+      width: 280px;
+      transform: translate( 280px );
+    }
+    &.opened-right .middle.panel {
+      padding-right: 280px !important;
+    }
+  }
+  &.huge-left {
+
+    .left.panel {
+      width: 360px;
+      transform: translate( -360px );
+    }
+    &.opened-left .middle.panel {
+      padding-left: 360px !important;
+    }
+  }
+  &.huge-right {
+
+    .right.panel {
+      width: 360px;
+      transform: translate( 360px );
+    }
+    &.opened-left .middle.panel {
+      padding-right: 360px !important;
+    }
+  }
+}
+
+/*******************************
+            States
+*******************************/
+.ui.panels {
+
+  &.reduced-left {
+
+    >.left.panel, >div >.left.panel {
+      width: 50px;
+    }
+    >.middle.panel, >div >.middle.panel {
+      padding-left: 50px !important;
+    }
+  }
+}
