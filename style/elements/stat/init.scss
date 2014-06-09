@@ -1,0 +1,87 @@
+/*******************************
+      Statistic
+*******************************/
+.ui.stats {
+  font-size: 14px;
+}
+
+/*******************************
+      Content
+*******************************/
+.ui.stats {
+
+  >.label {
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: transparent;
+  }
+  >.amount {
+    font-size: 2em;
+    color: #fff;
+  }
+  >.abbreviation {
+    font-size: 2em;
+    color: #fff;
+  }
+}
+
+/*******************************
+      Variation
+*******************************/
+.ui.stats {
+
+  &.inline {
+
+    >.label {
+      font-size: 2em;
+      line-height: 1.25em;
+      padding-right: 0.25em;
+    }
+    >.abbreviation {
+      line-height: 1em;
+    }
+  }
+}
+
+/*-------------------
+  Sizes
+--------------------*/
+.ui.statistic {
+
+  &.small {
+    font-size: 10px;
+
+    >.label {
+      font-size: 1.8em;
+      line-height: 1;
+    }
+  }
+  &.medium {
+    font-size: 18px;
+
+    >.amount {
+      font-size: 52px;
+    }
+    >.label {
+      line-height: 36px;
+
+      >i.icon {
+        line-height: 36px;
+      }
+    }
+    >.abbreviation {
+      margin: 0 -0.125em;
+    }
+  }
+  &.massive {
+    font-size: 24px;
+  }
+  &.one.half {
+    width: 50%;
+    @media (max-width: 1560px){
+      width: 100%;
+    }
+  }
+}

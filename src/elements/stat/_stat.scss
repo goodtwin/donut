@@ -1,0 +1,81 @@
+/*******************************
+            Standard
+*******************************/
+
+
+/*--------------
+      Stats
+---------------*/
+
+.ui.stats {
+  display: inline-block;
+  text-align: left;
+}
+
+/*--------------
+      Stat
+---------------*/
+
+.ui.stat {
+  width: 100%;
+  text-align: left;
+}
+
+/*--------------
+     Content
+---------------*/
+
+.ui.stats {
+
+  >.label {
+    width: 100%;
+    line-height: 1;
+  }
+  >.amount {
+    display: inline-block;
+    line-height: 1;
+  }
+  >.abbreviation {
+    display: inline-block;
+  }
+}
+
+.ui.stat {
+
+  >* {
+    display: inline-block;
+  }
+  .label, .amount {
+    width: 50%;
+  }
+}
+
+
+/*******************************
+           States
+*******************************/
+
+
+/*******************************
+           Variations
+*******************************/
+
+.ui.stats {
+
+	&.inline {
+
+		>.label, >.amount, >.abbreviation {
+			display: inline-block;
+			width: auto;
+			vertical-align: bottom;
+		}
+	}
+
+	&.centered {
+		text-align: center;
+	}
+
+	&.fluid {
+		width: 100%;
+	}
+}
