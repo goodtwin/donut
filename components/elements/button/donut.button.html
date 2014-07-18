@@ -1,0 +1,17 @@
+<polymer-element name="donut-button" attributes="animated">
+  <template>
+    <link href="donut.button.css" rel="stylesheet">
+    <link href="donut.button.theme.css" rel="stylesheet">
+    <!-- Content -->
+    <div id="visible">
+      <content select=".visible"></content>
+    </div>
+    <div id="hidden">
+      <content select=".hidden"></content>
+    </div>
+    <content></content>
+  </template>
+  <script>
+    Polymer({});
+  </script>
+</polymer-element>

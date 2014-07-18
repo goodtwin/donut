@@ -1,0 +1,14 @@
+/*******************************
+  Variations
+*******************************/
+:host {
+  background: blue;
+  color: white;
+}
+
+/*-------------------
+       Primary
+--------------------*/
+:host(.primary) {
+  background: green;
+}

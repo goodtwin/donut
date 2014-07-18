@@ -6,6 +6,21 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('./package.json'),
 
     assemble : {
+      components: {
+        options: {
+          assets: 'docs/assets',
+          flatten: false,
+          partials: ['docs/partials/*.hbs'],
+          layout: 'docs/layouts/components.hbs',
+          data: ['docs/data/*.{json,yml}']
+        },
+        files: [{
+          expand: true,
+          cwd: 'components/',
+          src: ['**/*.hbs'],
+          dest: 'dist/docs/'
+        }]
+      },
       docs: {
         options: {
           assets: 'docs/assets',
@@ -53,6 +68,15 @@ module.exports = function (grunt) {
         files : {
           'dist/docs/assets/stylesheets/docs.css': 'docs/assets/stylesheets/docs.scss'
         }
+      },
+      components: {
+        files: [{
+          expand: true,
+          src: ['components/**/*.scss'],
+          dest: 'dist/',
+          ext: '.css',
+          extDot: 'last'
+        }]
       }
     },
     myth: {
@@ -86,6 +110,14 @@ module.exports = function (grunt) {
           src: ['dist/docs/*']
         }
         ]
+      },
+      components: {
+        files: [
+        {
+          dot: true,
+          src: ['dist/components']
+        }
+        ]
       }
     },
     copy: {
@@ -113,6 +145,16 @@ module.exports = function (grunt) {
           cwd: 'docs/assets/',
           src: ['images/*', 'javascripts/**/*.js'],
           dest: 'dist/docs/assets/'
+        }
+        ]
+      },
+      components: {
+        files: [
+        {
+          expand: true,
+          cwd: 'components/',
+          src: ['polymer/*', 'platform.js','elements/**'],
+          dest: 'dist/components/'
         }
         ]
       },
@@ -184,5 +226,6 @@ grunt.registerTask('distcss', ['sass:dist', 'myth:dist']);
 grunt.registerTask('doccss', ['sass:docs', 'myth:docs']);
 grunt.registerTask('dist', ['clean:dist', 'copy:dist', 'distcss', 'cssmin']);
 grunt.registerTask('build', ['clean', 'dist', 'clean:docs', 'copy:docs', 'doccss', 'assemble']);
+grunt.registerTask('components', ['clean:components','sass:components', 'copy:components', 'assemble:components']);
 
 };

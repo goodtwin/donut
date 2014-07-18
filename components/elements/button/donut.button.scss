@@ -1,0 +1,112 @@
+/*
+ * # Donut - Button
+ * http://github.com/goodtwin/donut
+ *
+ *
+ * Copyright 2013 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+  donut-button
+*******************************/
+:host {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  outline: none;
+  border: none;
+  margin: 0em;
+  padding: 0.8em 1.5em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  color: inherit;
+  background-color: inherit;
+}
+
+/*******************************
+  Attributes
+*******************************/
+
+/*-------------------
+   Animated
+--------------------*/
+:host([animated]) {
+  position: relative;
+  overflow: hidden;
+
+  #visible, #hidden {
+    transition: right 0.3s ease 0s;
+  }
+  #visible {
+    position: relative;
+    left: auto;
+    right: 0%;
+  }
+  #hidden {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: auto;
+    right: -100%;
+    margin-top: -0.55em;
+  }
+}
+
+:host([animated]:hover) {
+
+  #visible {
+    left: auto;
+    right: 200%;
+  }
+  #hidden {
+    left: auto;
+    right: 0%;
+  }
+}
+
+/*-------------------
+    Sizes
+--------------------*/
+:host([milli]) {
+  font-size: 0.6rem;
+}
+
+:host {
+
+  &.tiny,
+  &.tiny .button {
+    font-size: 0.875em;
+  }
+
+  &.small,
+  &.small .button {
+    font-size: 0.875rem;
+  }
+
+  &.large,
+  &.large .button {
+    font-size: 1.125rem;
+  }
+
+  &.big,
+  &.big .button {
+    font-size: 1.25rem;
+  }
+
+  &.huge,
+  &.huge .button {
+    font-size: 1.375rem;
+  }
+
+  &.massive,
+  &.massive .button {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
