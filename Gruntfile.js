@@ -54,19 +54,8 @@ module.exports = function (grunt) {
     },
     sass: {
       dist: {
-        options: {
-          sourceComments: 'map',
-        },
         files : {
           'dist/style/stylesheets/style.css': 'style/style.scss'
-        }
-      },
-      docs: {
-        options: {
-          sourceComments: 'map',
-        },
-        files : {
-          'dist/docs/assets/stylesheets/docs.css': 'docs/assets/stylesheets/docs.scss'
         }
       },
       components: {
@@ -143,7 +132,7 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: 'docs/assets/',
-          src: ['images/*', 'javascripts/**/*.js'],
+          src: ['images/*', 'javascripts/**/*.js', 'stylesheets/*.css'],
           dest: 'dist/docs/assets/'
         }
         ]
@@ -226,6 +215,6 @@ grunt.registerTask('distcss', ['sass:dist', 'myth:dist']);
 grunt.registerTask('doccss', ['sass:docs', 'myth:docs']);
 grunt.registerTask('dist', ['clean:dist', 'copy:dist', 'distcss', 'cssmin']);
 grunt.registerTask('build', ['clean', 'dist', 'clean:docs', 'copy:docs', 'doccss', 'assemble']);
-grunt.registerTask('components', ['clean:components','sass:components', 'copy:components', 'assemble:components']);
+grunt.registerTask('components', ['clean:components', 'copy', 'assemble', 'sass']);
 
 };
