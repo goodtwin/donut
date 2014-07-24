@@ -13,10 +13,10 @@
       </div>
     </template>
     <template if="{{ icon }}">
-      <core-icon id="icon" icon="{{icon}}"></core-icon>
+      <core-icon id="icon" icon="{{ icon }}"></core-icon>
     </template>
-    <template if="{{ iconButton }}">
-      <core-icon id="icon" icon="{{iconButton}}"></core-icon>
+    <template if="{{ iconbutton }}">
+      <core-icon id="iconbutton" icon="{{ iconbutton }}"></core-icon>
     </template>
     <content></content>
   </template>
@@ -42,7 +42,8 @@
           * @type string
           * @default ''
           */
-        icon: {value: ''}
+        icon: {value: ''},
+        iconbutton: {value: ''}
       }
     });
   </script>

@@ -14,12 +14,22 @@
   background-color: $midGray;
 
   #icon {
-    fill: $midGray_80;
+    fill: $midGray_10;
+  }
+  #iconbutton {
+    fill: $white;
   }
 }
 
 :host(.secondary) {
   background-color: $midGray_70;
+
+  #icon {
+    fill: $lightGray_20;
+  }
+  #iconbutton {
+    fill: $darkGray;
+  }
 }
 
 :host(.warning) {
@@ -31,7 +41,26 @@
   background-color: $red_70;
 }
 
-:host(.basic) {
+:host(.basic), :host(.basic.primary) {
   background-color: transparent;
   color: $darkGray;
+  fill: $darkGray;
+
+  #icon {
+    fill: $darkGray_70;
+  }
+  #iconbutton {
+    fill: $darkGray_70;
+  }
+}
+
+:host(.basic.secondary) {
+  color: $darkGray_70;
+
+  #icon {
+    fill: $darkGray_50;
+  }
+  #iconbutton {
+    fill: $darkGray_50;
+  }
 }
