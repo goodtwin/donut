@@ -1,0 +1,126 @@
+/**
+ * Create our width classes, prefixed by the specified namespace.
+ */
+
+@mixin initialize-semantic-widths($namespace:"", $use-silent-classes:false){
+  $class-type:            unquote(".");
+
+  @if $use-silent-classes == true{
+      $class-type:        unquote("%");
+  }
+
+  /**
+   * Whole
+   */
+  #{$class-type}#{$namespace}one-whole         { width:100%; }
+
+
+  /**
+   * Halves
+   */
+  #{$class-type}#{$namespace}one-half          { width:50%; }
+
+
+  /**
+   * Thirds
+   */
+  #{$class-type}#{$namespace}one-third         { width:33.333%; }
+  #{$class-type}#{$namespace}two-thirds        { width:66.666%; }
+
+
+  /**
+   * Quarters
+   */
+  #{$class-type}#{$namespace}one-quarter       { width:25%; }
+  #{$class-type}#{$namespace}two-quarters      { @extend #{$class-type}#{$namespace}one-half; }
+  #{$class-type}#{$namespace}three-quarters    { width:75%; }
+
+
+  /**
+   * Fifths
+   */
+  #{$class-type}#{$namespace}one-fifth         { width:20%; }
+  #{$class-type}#{$namespace}two-fifths        { width:40%; }
+  #{$class-type}#{$namespace}three-fifths      { width:60%; }
+  #{$class-type}#{$namespace}four-fifths       { width:80%; }
+
+
+  /**
+   * Sixths
+   */
+  #{$class-type}#{$namespace}one-sixth         { width:16.666%; }
+  #{$class-type}#{$namespace}two-sixths        { @extend #{$class-type}#{$namespace}one-third; }
+  #{$class-type}#{$namespace}three-sixths      { @extend #{$class-type}#{$namespace}one-half; }
+  #{$class-type}#{$namespace}four-sixths       { @extend #{$class-type}#{$namespace}two-thirds; }
+  #{$class-type}#{$namespace}five-sixths       { width:83.333%; }
+
+
+  /**
+  * Sevenths
+  */
+   #{$class-type}#{$namespace}one-seventh         { width:14.2857%; }
+   #{$class-type}#{$namespace}two-sevenths        { width:28.5714%; }
+   #{$class-type}#{$namespace}three-sevenths      { width:42.8571%; }
+   #{$class-type}#{$namespace}four-sevenths       { width:57.1429%; }
+   #{$class-type}#{$namespace}five-sevenths       { width:71.3976%; }
+   #{$class-type}#{$namespace}six-sevenths        { width:85.6833%; }
+
+
+  /**
+   * Eighths
+   */
+  #{$class-type}#{$namespace}one-eighth        { width:12.5%; }
+  #{$class-type}#{$namespace}two-eighths       { @extend #{$class-type}#{$namespace}one-quarter; }
+  #{$class-type}#{$namespace}three-eighths     { width:37.5%; }
+  #{$class-type}#{$namespace}four-eighths      { @extend #{$class-type}#{$namespace}one-half; }
+  #{$class-type}#{$namespace}five-eighths      { width:62.5%; }
+  #{$class-type}#{$namespace}six-eighths       { @extend #{$class-type}#{$namespace}three-quarters; }
+  #{$class-type}#{$namespace}seven-eighths     { width:87.5%; }
+
+
+  /**
+  * Ninths
+  */
+  #{$class-type}#{$namespace}one-ninth         { width:11.11111%; }
+  #{$class-type}#{$namespace}two-ninths        { width:22.22222%; }
+  #{$class-type}#{$namespace}three-ninths      { width:33.33333%; }
+  #{$class-type}#{$namespace}four-ninths       { width:44.44444%; }
+  #{$class-type}#{$namespace}five-ninths       { width:55.55556%; }
+  #{$class-type}#{$namespace}six-ninths        { width:66.66667%; }
+  #{$class-type}#{$namespace}seven-ninths      { width:77.77778%; }
+  #{$class-type}#{$namespace}eight-ninths      { width:88.88889%; }
+
+
+  /**
+   * Tenths
+   */
+  #{$class-type}#{$namespace}one-tenth         { width:10%; }
+  #{$class-type}#{$namespace}two-tenths        { @extend #{$class-type}#{$namespace}one-fifth; }
+  #{$class-type}#{$namespace}three-tenths      { width:30%; }
+  #{$class-type}#{$namespace}four-tenths       { @extend #{$class-type}#{$namespace}two-fifths; }
+  #{$class-type}#{$namespace}five-tenths       { @extend #{$class-type}#{$namespace}one-half; }
+  #{$class-type}#{$namespace}six-tenths        { @extend #{$class-type}#{$namespace}three-fifths; }
+  #{$class-type}#{$namespace}seven-tenths      { width:70%; }
+  #{$class-type}#{$namespace}eight-tenths      { @extend #{$class-type}#{$namespace}four-fifths; }
+  #{$class-type}#{$namespace}nine-tenths       { width:90%; }
+
+
+  /**
+   * Twelfths
+   */
+  #{$class-type}#{$namespace}one-twelfth       { width:8.333%; }
+  #{$class-type}#{$namespace}two-twelfths      { @extend #{$class-type}#{$namespace}one-sixth; }
+  #{$class-type}#{$namespace}three-twelfths    { @extend #{$class-type}#{$namespace}one-quarter; }
+  #{$class-type}#{$namespace}four-twelfths     { @extend #{$class-type}#{$namespace}one-third; }
+  #{$class-type}#{$namespace}five-twelfths     { width:41.666% }
+  #{$class-type}#{$namespace}six-twelfths      { @extend #{$class-type}#{$namespace}one-half; }
+  #{$class-type}#{$namespace}seven-twelfths    { width:58.333%; }
+  #{$class-type}#{$namespace}eight-twelfths    { @extend #{$class-type}#{$namespace}two-thirds; }
+  #{$class-type}#{$namespace}nine-twelfths     { @extend #{$class-type}#{$namespace}three-quarters; }
+  #{$class-type}#{$namespace}ten-twelfths      { @extend #{$class-type}#{$namespace}five-sixths; }
+  #{$class-type}#{$namespace}eleven-twelfths   { width:91.666%; }
+
+}
+
+
+@include initialize-semantic-widths;

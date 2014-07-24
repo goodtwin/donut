@@ -1,0 +1,31 @@
+.soft          	 { padding:       $base-spacing-unit!important; }
+.soft--top      	{ padding-top:   $base-spacing-unit!important; }
+.soft--right    	{ padding-right: $base-spacing-unit!important; }
+.soft--bottom   	{ padding-bottom:$base-spacing-unit!important; }
+.soft--left     	{ padding-left:  $base-spacing-unit!important; }
+.soft--ends     	{ padding-top:   $base-spacing-unit!important; padding-bottom:$base-spacing-unit!important; }
+.soft--sides    	{ padding-right: $base-spacing-unit!important; padding-left:  $base-spacing-unit!important; }
+
+.soft-half          { padding:       $half-spacing-unit!important; }
+.soft-half--top     { padding-top:   $half-spacing-unit!important; }
+.soft-half--right   { padding-right: $half-spacing-unit!important; }
+.soft-half--bottom  { padding-bottom:$half-spacing-unit!important; }
+.soft-half--left    { padding-left:  $half-spacing-unit!important; }
+.soft-half--ends    { padding-top:   $half-spacing-unit!important; padding-bottom:$half-spacing-unit!important; }
+.soft-half--sides   { padding-right: $half-spacing-unit!important; padding-left:  $half-spacing-unit!important; }
+
+.soft-grid          { padding:       $base-grid-gutter!important; }
+.soft-grid--top     { padding-top:   $base-grid-gutter!important; }
+.soft-grid--right   { padding-right: $base-grid-gutter!important; }
+.soft-grid--bottom  { padding-bottom:$base-grid-gutter!important; }
+.soft-grid--left    { padding-left:  $base-grid-gutter!important; }
+.soft-grid--ends    { padding-top:   $base-grid-gutter!important; padding-bottom:$base-grid-gutter!important; }
+.soft-grid--sides   { padding-right: $base-grid-gutter!important; padding-left:  $base-grid-gutter!important; }
+
+.hard           	{ padding:       0!important; }
+.hard--top      	{ padding-top:   0!important; }
+.hard--right    	{ padding-right: 0!important; }
+.hard--bottom   	{ padding-bottom:0!important; }
+.hard--left     	{ padding-left:  0!important; }
+.hard--ends     	{ padding-top:   0!important; padding-bottom:0!important; }
+.hard--sides    	{ padding-right: 0!important; padding-left:  0!important; }

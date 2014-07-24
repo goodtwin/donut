@@ -7,6 +7,7 @@ componentUrl: '/dist/components/elements/button/donut.button.html'
 ---
 {{> header}}
 
+<link rel="import" href="/bower_components/core-icons/core-icons.html">
 <div class="main container">
   <div class="peek">
     <div class="ui vertical pointing secondary menu">
@@ -22,13 +23,13 @@ componentUrl: '/dist/components/elements/button/donut.button.html'
   <div class="follow example">
     <h4 class="ui header">Button</h4>
     <p>A standard button</p>
+    <div class="ui ignored message">A standard button will be automatically sized according to the visible content size</div>
     <donut-button>What do you say?</donut-button>
   </div>
 
   <div class="example">
     <h4 class="ui header">Animated</h4>
     <p>A button can animate to show hidden content</p>
-    <div class="ui ignored message">The button will be automatically sized according to the visible content size. Make sure there is enough room for the hidden content to show</div>
     <donut-button class="primary" animated>
       <div class="hidden">Next</div>
       <div class="visible">Hey</div>
@@ -38,7 +39,66 @@ componentUrl: '/dist/components/elements/button/donut.button.html'
   <div class="example">
     <h4 class="ui header">Sizes</h4>
     <p>A button can have multiple sizes</p>
-    <div class="ui ignored message">The button will be automatically sized according to the visible content size. Make sure there is enough room for the hidden content to show</div>
-    <donut-button milli>Really Small Here</donut-button>
+    <donut-button class="milli">Milli</donut-button>
+    <donut-button class="tiny">Tiny</donut-button>
+    <donut-button class="small">Small</donut-button>
+    <donut-button class="large">Large</donut-button>
+    <donut-button class="big">Big</donut-button>
+    <donut-button class="massive">Massive</donut-button>
   </div>
+
+  <div class="example">
+    <h4 class="ui header">Fluid</h4>
+    <p>A button can be fuild.</p>
+    <donut-button fluid>A Fluid Button</donut-button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Ordinality</h4>
+    <p>A button use ordinality.</p>
+    <div class="ui ignored message">Ordinality is the primary way to consistently differentiate buttons of different priority.</div>
+    <donut-button class="primary">Primary</donut-button>
+    <donut-button class="secondary">Secondary</donut-button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Basic</h4>
+    <p>A few button exist for semantic purposes.</p>
+    <donut-button class="basic">Basic</donut-button>
+    <donut-button class="basic secondary">Basic Secondary</donut-button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Semantic</h4>
+    <p>A few button exist for semantic purposes.</p>
+    <donut-button class="warning">Warning</donut-button>
+    <donut-button class="error">Error</donut-button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Icon Only</h4>
+    <p>A few button exist for semantic purposes.</p>
+    <donut-button class="primary" iconButton>
+
+    </donut-button>
+    <donut-button class="secondary" iconButton>
+
+    </donut-button>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Icons and Ordinality</h4>
+    <p>A few button exist for semantic purposes.</p>
+    <donut-button class="primary" icon="polymer">Primary Separate Icon Color</donut-button>
+    <donut-button class="secondary" icon="polymer">Secondary</donut-button>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Icons and Basic</h4>
+    <p>A few button exist for semantic purposes.</p>
+    <donut-button class="primary" iconButton="polymer">
+    </donut-button>
+    <donut-button class="secondary" iconButton="polymer">
+    </donut-button>
+  </div>
+
 </div>

@@ -1,17 +1,49 @@
-<polymer-element name="donut-button" attributes="animated">
+<link rel="import" href="/bower_components/core-icon/core-icon.html">
+<polymer-element name="donut-button" attributes="animated icon">
   <template>
     <link href="donut.button.css" rel="stylesheet">
     <link href="donut.button.theme.css" rel="stylesheet">
     <!-- Content -->
-    <div id="visible">
-      <content select=".visible"></content>
-    </div>
-    <div id="hidden">
-      <content select=".hidden"></content>
-    </div>
+    <template if="{{animated}}">
+      <div id="visible">
+        <content select=".visible"></content>
+      </div>
+      <div id="hidden">
+        <content select=".hidden"></content>
+      </div>
+    </template>
+    <template if="{{ icon }}">
+      <core-icon id="icon" icon="{{icon}}"></core-icon>
+    </template>
+    <template if="{{ iconButton }}">
+      <core-icon id="icon" icon="{{iconButton}}"></core-icon>
+    </template>
     <content></content>
   </template>
   <script>
-    Polymer({});
+    Polymer({
+      publish: {
+        /**
+          * (optional) Specifies button has two content areas, and
+          * button will animate between those content areas on hover.
+          *
+          * @attribute animated
+          * @type boolean
+          * @default false
+          */
+        animated: {value: false, reflect: true},
+        /**
+          * (optional) Specifies the icon name or index in the set of icons
+          * available in the icon set. If using this property, load the icon
+          * set separately where the icon is used. Should not use `src`
+          * if you are using this property.
+          *
+          * @attribute icon
+          * @type string
+          * @default ''
+          */
+        icon: {value: ''}
+      }
+    });
   </script>
 </polymer-element>

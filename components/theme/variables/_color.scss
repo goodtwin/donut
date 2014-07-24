@@ -1,0 +1,56 @@
+/**
+* BRAND VARIABLES
+**/
+
+// Base Prototype Colors
+$darkGray: #373737;
+$midGray: #5d5d5d;
+$lightGray: #e0e0e0;
+$red: red;
+
+
+// Variants
+$darkGray_110: shade($darkGray, 10%);    //#2c2b2a
+$darkGray_95: tint($darkGray, 5%);       //#413f3e
+$darkGray_90: tint($darkGray, 10%);	  //#4b4948
+$darkGray_80: tint($darkGray, 20%);	  //#5f5d5d
+$darkGray_70: tint($darkGray, 30%);	  //#737171
+$darkGray_60: tint($darkGray, 40%);	  //#878685
+$darkGray_50: tint($darkGray, 50%);	  //#9b9a99
+$darkGray_40: tint($darkGray, 60%);	  //#afaeae
+$darkGray_30: tint($darkGray, 70%);      //#c3c2c2
+$darkGray_20: tint($darkGray, 80%);	  //#d7d7d6
+$darkGray_10: tint($darkGray, 90%);      //#ebeaea
+$darkGray_5: tint($darkGray, 95%);	   //#f5f5f5
+
+$midGray_95: tint($midGray, 5%);		 //#56575c
+$midGray_90: tint($midGray, 10%);		//#5e5f64
+$midGray_80: tint($midGray, 20%);		//#717175
+$midGray_70: tint($midGray, 30%);		//#828386
+$midGray_70: tint($midGray, 40%);		//#949598
+$midGray_50: tint($midGray, 50%);		//#a6a6a9
+$midGray_70: tint($midGray, 60%);		//#b8b8ba
+$midGray_30: tint($midGray, 70%);		//#c9cacb
+$midGray_20: tint($midGray, 80%);		//#dbdcdd
+$midGray_10: tint($midGray, 90%);		//#ededed
+$midGray_5: tint($midGray, 95%);		 //#f6f6f6
+
+$lightGray_95: tint($lightGray, 5%);	 //#e2e0db
+$lightGray_90: tint($lightGray, 10%);	//#e3e1dd
+$lightGray_80: tint($lightGray, 20%);	//#e6e5e1
+$lightGray_70: tint($lightGray, 30%);	//#e9e8e4
+$lightGray_60: tint($lightGray, 40%);	//#ecebe8
+$lightGray_50: tint($lightGray, 50%);	//#efeeec
+$lightGray_40: tint($lightGray, 60%);	//#f3f2f0
+$lightGray_30: tint($lightGray, 70%);	//#f6f5f4
+$lightGray_20: tint($lightGray, 80%);	//#f9f8f7
+$lightGray_10: tint($lightGray, 90%);	//#fcfcfb
+$lightGray_5: tint($lightGray, 95%);	 //#fdfdfd
+
+$red_70: tint($red, 30%); //#EB7C52
+$red_50: tint($red, 50%); //#F1A284
+$red_20: tint($red, 80%); //#FADBCF
+
+// Neutrals
+$black: $darkGray;
+$white: #fff;
