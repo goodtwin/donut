@@ -53,4 +53,10 @@ $red_20: tint($red, 80%); //#FADBCF
 
 // Neutrals
 $black: $darkGray;
-$white: #fff;
+$white: rgba(255,255,255,1);
+
+// Default tints and shades
+// Useful when foreground color depends on bg color
+$tint: rgba(255,255,255,0.85);
+$shade: rgba(0,0,0,0.75);
+$shade-half: rgba(0,0,0,0.6);

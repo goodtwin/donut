@@ -23,12 +23,13 @@
 
 :host(.secondary) {
   background-color: $midGray_70;
+  color: $shade;
 
   #icon {
-    fill: $lightGray_20;
+    fill: $shade-half;
   }
   #iconbutton {
-    fill: $darkGray;
+    fill: $shade;
   }
 }
 
@@ -47,10 +48,10 @@
   fill: $darkGray;
 
   #icon {
-    fill: $darkGray_70;
+    fill: $shade;
   }
   #iconbutton {
-    fill: $darkGray_70;
+    fill: $shade;
   }
 }
 
@@ -58,9 +59,9 @@
   color: $darkGray_70;
 
   #icon {
-    fill: $darkGray_50;
+    fill: $shade_half;
   }
   #iconbutton {
-    fill: $darkGray_50;
+    fill: $shade_half;
   }
 }
