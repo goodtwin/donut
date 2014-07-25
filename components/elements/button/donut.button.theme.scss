@@ -1,5 +1,8 @@
 @import "../../theme/imports";
 
+/*******************************
+          Base Theme
+*******************************/
 :host {
   background-color: $midGray;
   color: $white;
@@ -8,16 +11,25 @@
   font-style: normal;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   border-radius: $base-round;
+  transition: opacity 0.2s ease-in-out;
 }
 
+:host(:hover) {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/*******************************
+          Ordinality
+*******************************/
 :host(.primary) {
   background-color: $midGray;
 
   #icon {
-    fill: $midGray_10;
+    color: $midGray_10;
   }
   #iconbutton {
-    fill: $white;
+    color: $white;
   }
 }
 
@@ -26,42 +38,46 @@
   color: $shade;
 
   #icon {
-    fill: $shade-half;
+    color: $shade-half;
   }
   #iconbutton {
-    fill: $shade;
+    color: $shade;
   }
 }
 
+
+/*******************************
+          Semantic
+*******************************/
 :host(.warning) {
   background-color: $lightGray;
   color: $red_70;
+  transition: color 0.3s;
 }
 
 :host(.error) {
   background-color: $red_70;
 }
 
+
+/*******************************
+          Basic
+*******************************/
 :host(.basic), :host(.basic.primary) {
   background-color: transparent;
   color: $darkGray;
-  fill: $darkGray;
+  transition: color 0.3s;
 
-  #icon {
-    fill: $shade;
-  }
-  #iconbutton {
-    fill: $shade;
+
+  #icon, #iconbutton {
+    color: $darkGray;
   }
 }
 
 :host(.basic.secondary) {
   color: $darkGray_70;
 
-  #icon {
-    fill: $shade_half;
-  }
-  #iconbutton {
-    fill: $shade_half;
+  #icon, #iconbutton {
+    color: $shade_half;
   }
 }
