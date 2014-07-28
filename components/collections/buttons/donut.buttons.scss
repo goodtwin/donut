@@ -1,0 +1,30 @@
+/*
+ * # Donut - Buttons
+ * http://github.com/goodtwin/donut
+ *
+ *
+ * Copyright 2013 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+  donut-buttons
+*******************************/
+:host(:after) {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+polyfill-next-selector { content: ':host > *'; }
+::content > *  {
+  float: left;
+}
+
+polyfill-next-selector { content: '# > *'; }
+#verticalContainer ::content > *  {
+  float: none;
+}

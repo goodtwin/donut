@@ -1,0 +1,30 @@
+<link rel="import" href="../../elements/button/donut.button.html">
+<polymer-element name="donut-buttons" attributes="animated icon">
+  <template>
+    <link href="donut.buttons.css" rel="stylesheet">
+    <link href="donut.buttons.theme.css" rel="stylesheet">
+    <!-- Content -->
+    <template if="{{vertical}}">
+      <div id="verticalContainer" vertical layout>
+        <content></content>
+      </div>
+    </template>
+    <div id="horizontalContainer" horiztonal layout>
+      <content></content>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      publish: {
+        /**
+          * (optional) Specifies buttons are to be layed out vertically.
+          *
+          * @attribute vertical
+          * @type boolean
+          * @default false
+          */
+        vertical: {value: false, reflect: true},
+      }
+    });
+  </script>
+</polymer-element>

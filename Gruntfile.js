@@ -142,7 +142,7 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: 'components/',
-          src: ['polymer/*', 'platform.js','elements/**'],
+          src: ['polymer/*', 'platform.js','elements/**', 'collections/**'],
           dest: 'dist/components/'
         }
         ]
@@ -194,6 +194,10 @@ module.exports = function (grunt) {
       js: {
         files: ['src/**/*.js'],
         tasks: ['copy:dist', 'copy:docs']
+      },
+      components: {
+        files: ['components/**'],
+        tasks: ['components']
       }
     },
     cssmin: {
@@ -215,6 +219,6 @@ grunt.registerTask('distcss', ['sass:dist', 'myth:dist']);
 grunt.registerTask('doccss', ['sass:docs', 'myth:docs']);
 grunt.registerTask('dist', ['clean:dist', 'copy:dist', 'distcss', 'cssmin']);
 grunt.registerTask('build', ['clean', 'dist', 'clean:docs', 'copy:docs', 'doccss', 'assemble']);
-grunt.registerTask('components', ['clean:components', 'copy', 'assemble', 'sass']);
+grunt.registerTask('components', ['clean:components', 'copy', 'assemble', 'sass:components']);
 
 };
