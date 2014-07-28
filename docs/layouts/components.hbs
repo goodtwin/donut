@@ -16,40 +16,19 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,300,700,300italic,400italic,700italic" >
 <link rel="stylesheet" type="text/css" href="/dist/components/layout/layout.css">
 <link rel="stylesheet" type="text/css" href="/dist/style/stylesheets/style.css">
 <link rel="stylesheet" type="text/css" href="/dist/docs/assets/stylesheets/docs.css">
 
 </head>
 <body id="example" unresolved>
-  <div class="ui large vertical inverted labeled icon sidebar menu" id="menu">
-    <a class="hide item">
-      <i class="close icon"></i> Close Menu
-    </a>
+  <div class="ui large inverted vertical labeled icon fixed active sidebar menu" id="menu">
     {{#each pages}}
     <div class="item">
           <a href="{{relative .. /page.dest this.dest}}">{{ data.title }}</a>
     </div>
     {{/each }}
-  </div>
-  <div class="ui fixed transparent inverted main menu">
-    <div class="container">
-    <a class="launch item"><i class="icon list layout"></i> Content</a>
-    <div class="title item">
-
-    </div>
-    <div class="right menu">
-      <div class="vertically fitted borderless item">
-      </div>
-      <a class="popup icon github item" data-content="View project on Github" href="https://github.com/quirkyinc/semantic">
-      <i class="icon github"></i>
-      </a>
-    </div>
-    </div>
-  </div>
-  <div class="ui black huge launch right attached button">
-    <i class="icon list layout"></i>
-    <span class="text">Menu</span>
   </div>
   {{> body  }}
 

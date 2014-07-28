@@ -24,10 +24,11 @@ h3::selection {
 html,
 body {
   font-size: 15px;
+  font-family: 'Roboto', sans-serif;
 }
 
 body#example {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif/*rtl:"Droid Arabic Kufi", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif */;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif/*rtl:"Droid Arabic Kufi", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif */;
   background: #FCFCFC url(../images/bg.jpg) repeat;
   margin: 0px;
   padding: 0px;
@@ -43,7 +44,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif/*rtl:"Droid Arabic Kufi", "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif */;;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif/*rtl:"Droid Arabic Kufi", "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif */;;
 }
 
 /*
@@ -68,7 +69,7 @@ ul.list li {
 h1 {
   margin: 0px 0px 20px;
   padding: 50px 0px 5px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
 }
 h4 + p {
   margin: 0px 0px 20px;
