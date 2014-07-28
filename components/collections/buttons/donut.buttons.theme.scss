@@ -15,31 +15,30 @@
 /*******************************
   Base Theme
 *******************************/
+:host-context(.prototype) {
 
-polyfill-next-selector { content: ':host > *'; }
-::content > *  {
-  border-radius: 0;
-  border-right: 1px solid $midGray_50;
+  ::content > *  {
+    border-radius: 0;
+    border-right: 1px solid $midGray_50;
 
-  &:nth-child(1) {
-    border-radius: $base-round 0 0 $base-round;
+    &:nth-child(1) {
+      border-radius: $base-round 0 0 $base-round;
+    }
+    &:last-child {
+      border-radius: 0 $base-round $base-round 0;
+      border-right: none;
+    }
   }
-  &:last-child {
-    border-radius: 0 $base-round $base-round 0;
-    border-right: none;
-  }
-}
+  #verticalContainer ::content > *  {
+    border-radius: 0;
+    border-bottom: 1px solid $midGray_50;
 
-polyfill-next-selector { content: '# > *'; }
-#verticalContainer ::content > *  {
-  border-radius: 0;
-  border-bottom: 1px solid $midGray_50;
-
-  &:nth-child(1) {
-    border-radius: $base-round $base-round 0 0;
-  }
-  &:last-child {
-    border-radius: 0 0 $base-round $base-round;
-    border-bottom: none;
+    &:nth-child(1) {
+      border-radius: $base-round $base-round 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 $base-round $base-round;
+      border-bottom: none;
+    }
   }
 }
