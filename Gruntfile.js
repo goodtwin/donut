@@ -66,7 +66,15 @@ module.exports = function (grunt) {
           ext: '.css',
           extDot: 'last'
         }]
-      }
+      },
+      docs: {
+        options: {
+          sourceComments: 'map',
+        },
+        files : {
+          'dist/docs/assets/stylesheets/docs.css': 'docs/assets/stylesheets/docs.scss'
+        }
+      },
     },
     myth: {
       options: {
