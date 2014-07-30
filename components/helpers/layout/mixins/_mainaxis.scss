@@ -1,0 +1,33 @@
+@mixin mainaxis {
+  /* alignment in main axis */
+
+  [layout][start-justified] {
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+
+  [layout][center-justified] {
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
+  [layout][end-justified] {
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+
+  [layout][around-justified] {
+    -ms-flex-pack: around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  }
+
+  [layout][justified] {
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+}

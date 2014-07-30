@@ -1,0 +1,31 @@
+@mixin display {
+
+  [inline-block] {
+    display: inline-block;
+
+    &[top] {
+      vertical-align: top;
+    }
+
+    &[center] {
+      vertical-align: middle;
+    }
+
+    &[bottom] {
+      vertical-align: bottom;
+    }
+  }
+
+  [block] {
+    display: block;
+  }
+
+  /* ie support for hidden */
+  [hidden] {
+    display: none !important;
+  }
+
+  [visuallyhidden]{
+
+  }
+}

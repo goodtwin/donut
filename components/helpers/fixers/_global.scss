@@ -1,0 +1,10 @@
+@import "mixins/clearfix";
+
+html {
+  @include clearfix;
+
+  body[fullbleed] {
+    margin: 0;
+    height: 100vh;
+  }
+}

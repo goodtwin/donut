@@ -1,0 +1,93 @@
+@mixin flex() {
+  [layout][horizontal], [layout][vertical] {
+    display: flex;
+  }
+
+  [layout][horizontal][inline], [layout][vertical][inline] {
+    display: inline-flex;
+  }
+
+  [layout][horizontal] {
+    flex-direction: row;
+  }
+
+  [layout][horizontal][reverse] {
+    flex-direction: row-reverse;
+  }
+
+  [layout][vertical] {
+    flex-direction: column;
+  }
+
+  [layout][vertical][reverse] {
+    flex-direction: column-reverse;
+  }
+
+  [layout][wrap] {
+    flex-wrap: wrap;
+  }
+
+  [layout][wrap-reverse] {
+    flex-wrap: wrap-reverse;
+  }
+
+  [flex] {
+    flex: 1;
+  }
+
+  [flex][auto] {
+    flex: 1 1 auto;
+  }
+
+  [flex][none] {
+    flex: none;
+  }
+
+  [flex][one] {
+    flex: 1;
+  }
+
+  [flex][two] {
+    flex: 2;
+  }
+
+  [flex][three] {
+    flex: 3;
+  }
+
+  [flex][four] {
+    flex: 4;
+  }
+
+  [flex][five] {
+    flex: 5;
+  }
+
+  [flex][six] {
+    flex: 6;
+  }
+
+  [flex][seven] {
+    flex: 7;
+  }
+
+  [flex][eight] {
+    flex: 8;
+  }
+
+  [flex][nine] {
+    flex: 9;
+  }
+
+  [flex][ten] {
+    flex: 10;
+  }
+
+  [flex][eleven] {
+    flex: 11;
+  }
+
+  [flex][twelve] {
+    flex: 12;
+  }
+}

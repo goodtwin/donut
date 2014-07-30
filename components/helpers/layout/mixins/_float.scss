@@ -1,0 +1,14 @@
+@mixin float {
+
+  [float][left] {
+    float: left;
+  }
+
+  [float][right] {
+    float: right;
+  }
+  
+  [float][none] {
+    float: none;
+  }
+}
