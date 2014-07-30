@@ -9,24 +9,18 @@
 *
 */
 
+@import "../../helpers/layout/crossaxis";
+@import "../../helpers/layout/flex";
 
 /*******************************
 donut-media
 *******************************/
-:host {
-	display: inline-block;
-	overflow:hidden;
+#figure {
+	margin-right: 10px;
 }
 
-:host {
-	#image {
-		float: left;
-	}
-
-	#body {
-		overflow: hidden;
-		display: block;
-	}
+#body {
+	text-align:left;
 }
 
 
@@ -35,20 +29,12 @@ donut-media
 Attributes
 *******************************/
 
+/*-------------------
+	reversed
+--------------------*/
 :host([reversed]) {
 
-	#image {
-		float: right;
+	#figure {
+		order: 1;
 	}
 }
-
-
-
-/*-------------------
-	Fluid
---------------------*/
-
-
-/*-------------------
-	Sizes
---------------------*/
