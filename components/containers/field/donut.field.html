@@ -1,0 +1,35 @@
+<link rel="import" href="/bower_components/core-icon/core-icon.html">
+<link rel="import" href="/bower_components/core-input/core-input.html">
+<polymer-element name="donut-field" attributes="inline" extends="core-input">
+  <template>
+    <link href="donut.field.css" rel="stylesheet">
+    <link href="donut.field.theme.css" rel="stylesheet">
+    <!-- Content -->
+    <template if="{{label}}">
+      <label for="input">{{label}}</label>
+      <core-input></core-input>
+    </template>
+    <div id="input">
+      <shadow></shadow>
+    </div>
+    <div id="errorContainer">
+      <core-icon src="error"></core-icon>
+      <div id="error" role="alert" aria-hidden="{{!invalid}}">{{error || validationMessage}}</div>
+    </div>
+  </template>
+  <script>
+    Polymer('donut-field', {
+      publish: {
+        /**
+          * (optional) Specifies that a label be inline with the input
+          *
+          * @attribute animated
+          * @type boolean
+          * @default false
+          */
+        inline: {value: false, reflect: true},
+        label: {value: ''}
+      }
+    });
+  </script>
+</polymer-element>
