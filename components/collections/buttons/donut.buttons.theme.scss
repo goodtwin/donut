@@ -17,7 +17,7 @@
 *******************************/
 :host-context(.prototype) {
 
-  ::content > *  {
+  ::content > * {
     border-radius: 0;
     border-right: 1px solid $midGray_50;
 
