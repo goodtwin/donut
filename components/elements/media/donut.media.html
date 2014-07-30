@@ -1,0 +1,41 @@
+<link rel="import" href="/bower_components/core-icon/core-icon.html">
+<polymer-element name="donut-media" attributes="">
+<template>
+	<link href="donut.media.css" rel="stylesheet">
+	<link href="donut.media.theme.css" rel="stylesheet">
+	<!-- Content -->
+	<div id="image">
+		<content select=".image"></content>
+	</div>
+	<div id="body">
+		<content></content>
+	</div>
+</template>
+<script>
+	Polymer({
+	publish: {
+		/**
+		* (optional) Specifies button has two content areas, and
+		* button will animate between those content areas on hover.
+		*
+		* @attribute animated
+		* @type boolean
+		* @default false
+		*/
+		//animated: {value: false, reflect: true},
+		/**
+		* (optional) Specifies the icon name or index in the set of icons
+		* available in the icon set. If using this property, load the icon
+		* set separately where the icon is used. Should not use `src`
+		* if you are using this property.
+		*
+		* @attribute icon
+		* @type string
+		* @default ''
+		*/
+		reversed: {value: ''},
+		//iconbutton: {value: ''}
+	}
+	});
+</script>
+</polymer-element>

@@ -1,0 +1,54 @@
+/*
+* # Donut - Media
+* http://github.com/goodtwin/donut
+*
+*
+* Copyright 2014 Contributors
+* Released under the MIT license
+* http://opensource.org/licenses/MIT
+*
+*/
+
+
+/*******************************
+donut-media
+*******************************/
+:host {
+	display: inline-block;
+	overflow:hidden;
+}
+
+:host {
+	#image {
+		float: left;
+	}
+
+	#body {
+		overflow: hidden;
+		display: block;
+	}
+}
+
+
+
+/*******************************
+Attributes
+*******************************/
+
+:host([reversed]) {
+
+	#image {
+		float: right;
+	}
+}
+
+
+
+/*-------------------
+	Fluid
+--------------------*/
+
+
+/*-------------------
+	Sizes
+--------------------*/

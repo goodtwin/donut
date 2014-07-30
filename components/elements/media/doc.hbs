@@ -1,0 +1,45 @@
+---
+css         : 'media'
+title       : 'Media'
+description : 'Generally, the media object is an image to the left, with descriptive content to the right. This is a more abstract dual content element.'
+type        : 'Element'
+componentUrl: '/dist/components/elements/media/donut.media.html'
+---
+
+<link rel="import" href="/bower_components/core-icons/core-icons.html">
+<div class="main container prototype">
+
+{{> header}}
+
+<h2 class="ui dividing header">Types</h2>
+
+<!-- <div class="follow example">
+	<h4 class="ui header">Button</h4>
+	<p>A standard button</p>
+	<div class="ui ignored message">A standard button will be automatically sized according to the visible content size</div>
+	<donut-button>The Standard</donut-button>
+</div> -->
+
+<div class="example">
+	<h4 class="ui header">Standard</h4>
+	<p>Image floated left</p>
+	<donut-media>
+	<div class="image">
+		<img src="http://www.fillmurray.com/g/200/200" alt="" />
+	</div>
+	Hey. Hey I'm in a media element.
+	</donut-media>
+</div>
+
+<div class="example">
+	<h4 class="ui header">Reversed</h4>
+	<p>Image floated right</p>
+	<donut-media reversed>
+	<div class="image">
+		<img src="http://www.fillmurray.com/g/200/200" alt="" />
+	</div>
+	<div class="body">Hey. Hey I'm in a media element.</div>
+	</donut-media>
+</div>
+
+</div>
