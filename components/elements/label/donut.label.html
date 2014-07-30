@@ -1,0 +1,41 @@
+<link rel="import" href="/bower_components/core-icon/core-icon.html">
+<polymer-element name="donut-label" attributes="">
+<template>
+	<link href="donut.label.css" rel="stylesheet">
+	<link href="donut.label.theme.css" rel="stylesheet">
+	<!-- Content -->
+	<template if="{{ icon }}">
+		<core-icon id="icon" icon="{{ icon }}" size="16"></core-icon>
+	</template>
+	<content></content>
+	<template if="{{ removable }}">
+		<core-icon id="removable" icon="clear" size="16"></core-icon>
+	</template>
+	<content select=".detail"></content>
+</template>
+<script>
+	Polymer({
+	publish: {
+		/**
+		* (optional) Specifies the icon name or index in the set of icons
+		* available in the icon set. If using this property, load the icon
+		* set separately where the icon is used. Should not use `src`
+		* if you are using this property.
+		*
+		* @attribute icon
+		* @type string
+		* @default ''
+		*/
+		icon: {value: ''},
+		/**
+		* (optional) Identifies the label as actionable, having a close icon.
+		*
+		* @attribute removable
+		* @type string
+		* @default false
+		*/
+		removable: {value: false},
+	}
+	});
+</script>
+</polymer-element>

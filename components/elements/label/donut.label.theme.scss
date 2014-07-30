@@ -1,0 +1,21 @@
+@import "../../theme/imports";
+
+/*******************************
+		Base Theme
+*******************************/
+:host-context(.prototype) {
+
+	&:host {
+		background-color: $lightGray;
+		border-radius: $base-round;
+		padding: $base-spacing-unit/2 $base-spacing-unit;
+	}
+
+	#removable {
+		opacity: 0.6;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
