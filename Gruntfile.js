@@ -150,7 +150,7 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: 'components/',
-          src: ['polymer/*', 'platform.js','elements/**', 'collections/**'],
+          src: ['polymer/*', 'platform.js','elements/**', 'collections/**', 'containers/**'],
           dest: 'dist/components/'
         }
         ]
