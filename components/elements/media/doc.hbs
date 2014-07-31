@@ -22,23 +22,47 @@ componentUrl: '/dist/components/elements/media/donut.media.html'
 
 <div class="example">
 	<h4 class="ui header">Standard</h4>
-	<p>Image floated left</p>
-	<donut-media>
-	<div class="image">
-		<img src="http://www.fillmurray.com/g/200/200" alt="" />
-	</div>
-	Hey. Hey I'm in a media element.
+	<p>Body to the right</p>
+	<donut-media layout horizontal>
+		<div class="figure">
+			<img src="http://placehold.it/200x200" alt="" />
+		</div>
+		Annie L. Jack (1839 - 1912) was the first Canadian professional woman garden writer. Born in Northamptonshire, England, to John Hayr on 1 Jan 1839. In 1852, Annie Linda Hayr moved to Canada from Troy, New York where she had attended Miss Williard`s Academy.
 	</donut-media>
 </div>
 
 <div class="example">
 	<h4 class="ui header">Reversed</h4>
-	<p>Image floated right</p>
-	<donut-media reversed>
-	<div class="image">
-		<img src="http://www.fillmurray.com/g/200/200" alt="" />
-	</div>
-	<div class="body">Hey. Hey I'm in a media element.</div>
+	<p>Body to the left</p>
+	<donut-media layout horizontal reversed>
+		<div class="figure">
+			<img src="http://placehold.it/200x200" alt="" />
+		</div>
+		Annie L. Jack (1839 - 1912) was the first Canadian professional woman garden writer. Born in Northamptonshire, England, to John Hayr on 1 Jan 1839. In 1852, Annie Linda Hayr moved to Canada from Troy, New York where she had attended Miss Williard`s Academy.
+	</donut-media>
+</div>
+
+<h2 class="ui dividing header">Other Layout Patterns</h2>
+
+<div class="example">
+	<h4 class="ui header">Center</h4>
+	<p>Contents centered</p>
+	<donut-media layout horizontal center>
+		<div class="figure">
+			<img src="http://placehold.it/200x200" alt="" />
+		</div>
+		Annie L. Jack (1839 - 1912) was the first Canadian professional woman garden writer. Born in Northamptonshire, England, to John Hayr on 1 Jan 1839. In 1852, Annie Linda Hayr moved to Canada from Troy, New York where she had attended Miss Williard`s Academy.
+	</donut-media>
+</div>
+
+<div class="example">
+	<h4 class="ui header">Bottom</h4>
+	<p>Contents aligned to bottom</p>
+	<donut-media layout horizontal end>
+		<div class="figure">
+			<img src="http://placehold.it/200x200" alt="" />
+		</div>
+		Annie L. Jack (1839 - 1912) was the first Canadian professional woman garden writer. Born in Northamptonshire, England, to John Hayr on 1 Jan 1839. In 1852, Annie Linda Hayr moved to Canada from Troy, New York where she had attended Miss Williard`s Academy.
 	</donut-media>
 </div>
 

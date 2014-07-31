@@ -4,10 +4,10 @@
 	<link href="donut.media.css" rel="stylesheet">
 	<link href="donut.media.theme.css" rel="stylesheet">
 	<!-- Content -->
-	<div id="image">
-		<content select=".image"></content>
+	<div id="figure">
+		<content select=".figure"></content>
 	</div>
-	<div id="body">
+	<div id="body" flex>
 		<content></content>
 	</div>
 </template>
@@ -15,26 +15,13 @@
 	Polymer({
 	publish: {
 		/**
-		* (optional) Specifies button has two content areas, and
-		* button will animate between those content areas on hover.
+		* (optional) Specifies media has the body bloclk on the left.
 		*
-		* @attribute animated
+		* @attribute reversed
 		* @type boolean
 		* @default false
 		*/
-		//animated: {value: false, reflect: true},
-		/**
-		* (optional) Specifies the icon name or index in the set of icons
-		* available in the icon set. If using this property, load the icon
-		* set separately where the icon is used. Should not use `src`
-		* if you are using this property.
-		*
-		* @attribute icon
-		* @type string
-		* @default ''
-		*/
-		reversed: {value: ''},
-		//iconbutton: {value: ''}
+		reversed: {value: false},
 	}
 	});
 </script>

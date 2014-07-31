@@ -1,5 +1,5 @@
 /*
-* # Donut - Media
+* # Donut - Label
 * http://github.com/goodtwin/donut
 *
 *
@@ -9,33 +9,27 @@
 *
 */
 
-@import "../../helpers/layout/crossaxis";
-@import "../../helpers/layout/flex";
-
 /*******************************
-donut-media
+donut-label
 *******************************/
-#figure {
-	margin-right: 10px;
+:host {
+	display: inline-block;
+	vertical-align: middle;
 }
-
-#body {
-	text-align:left;
-}
-
-
 
 /*******************************
 Attributes
 *******************************/
 
 /*-------------------
-	reversed
+	removable
 --------------------*/
-:host([reversed]) {
+#removable {
+	cursor: pointer;
+}
 
-	#figure {
-		margin-left: 10px;
-		order: 1;
-	}
+/*-------------------
+	icon
+--------------------*/
+#icon {
 }
