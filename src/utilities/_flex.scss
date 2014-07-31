@@ -1,0 +1,169 @@
+body {
+
+  // sets up entire body to be flex ready
+  &[fullbleed] {
+    margin: 0;
+    height: 100vh;
+  }
+
+  /* flex box basics */
+  [layout][horizontal], [layout][vertical] {
+    display: flex;
+  }
+
+  [layout][horizontal][inline], [layout][vertical][inline] {
+    display: inline-flex;
+  }
+
+  [layout][horizontal] {
+    flex-direction: row;
+  }
+
+  [layout][horizontal][reverse] {
+    flex-direction: row-reverse;
+  }
+
+  [layout][vertical] {
+    flex-direction: column;
+  }
+
+  [layout][vertical][reverse] {
+    flex-direction: column-reverse;
+  }
+
+  [layout][wrap] {
+    flex-wrap: wrap;
+  }
+
+  [layout][wrap-reverse] {
+    flex-wrap: wrap-reverse;
+  }
+
+  /* content alignment */
+  [layout][stretch]{
+    align-content: stretch;
+  }
+
+  [flex] {
+    flex: 1;
+  }
+
+  [flex][auto] {
+    flex: 1 1 auto;
+  }
+
+  [flex][none] {
+    flex: none;
+  }
+
+  [flex][one] {
+    flex: 1;
+  }
+
+  [flex][two] {
+    flex: 2;
+  }
+
+  [flex][three] {
+    flex: 3;
+  }
+
+  [flex][four] {
+    flex: 4;
+  }
+
+  [flex][five] {
+    flex: 5;
+  }
+
+  [flex][six] {
+    flex: 6;
+  }
+
+  [flex][seven] {
+    flex: 7;
+  }
+
+  [flex][eight] {
+    flex: 8;
+  }
+
+  [flex][nine] {
+    flex: 9;
+  }
+
+  [flex][ten] {
+    flex: 10;
+  }
+
+  [flex][eleven] {
+    flex: 11;
+  }
+
+  [flex][twelve] {
+    flex: 12;
+  }
+
+  /* alignment in main axis */
+  [layout][start-justified] {
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+
+  [layout][center-justified] {
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
+  [layout][end-justified] {
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+
+  [layout][around-justified] {
+    -ms-flex-pack: around;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  }
+
+  [layout][justified] {
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  /* alignment in cross axis */
+  [layout][start] {
+    align-items: flex-start;
+  }
+
+  [layout][center] {
+    align-items: center;
+  }
+
+  [layout][end] {
+    align-items: flex-end;
+  }
+
+  /* self alignment */
+  [self-start] {
+    align-self: flex-start;
+  }
+
+  [self-center] {
+    align-self: center;
+  }
+
+  [self-end] {
+    align-self: flex-end;
+  }
+
+  [self-stretch] {
+    align-self: stretch;
+  }
+
+
+}
