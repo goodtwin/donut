@@ -19,105 +19,14 @@
 
 
 </head>
-<body id="example">
-	<div class="ui large vertical inverted labeled icon sidebar menu" id="menu">
-	<a class="hide item">
-		<i class="close icon"></i> Close Menu
-	</a>
-	{{#each pages}}
-	<div class="item">
-				<a href="{{relative .. /page.dest this.dest}}">{{ data.title }}</a>
-	</div>
-	{{/each }}
-<!-- 		<a class="hide item">
-		<i class="close icon"></i> Close Menu
-		</a>
-		<div class="item">
-		<a href="/">
-			<b>Introduction</b>
-		</a>
-		<div class="menu">
-			<% for element in uiIntroduction: %>
-			<a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>"><%= element.title %></a>
-			<% end %>
-		</div>
-		</div>
-		<div class="item">
-		<b>Project</b>
-		<div class="menu">
-			<% for element in uiProject: %>
-			<a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>"><%= element.title %></a>
-			<% end %>
-		</div>
-		</div>
-		<div class="item">
-		<a href="/element.html"><b>Elements</b></a>
-		<div class="menu">
-			<% for element in uiElements: %>
-			<a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>"><%= element.title %></a>
-			<% end %>
-		</div>
-		</div>
-		<div class="item">
-		<a href="/collection.html"><b>Collections</b></a>
-		<div class="menu">
-			<% for element in uiCollections: %>
-			<a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>"><%= element.title %></a>
-			<% end %>
-		</div>
-		</div>
-		<div class="item">
-		<b>Views</b>
-		<div class="menu">
-			<% for element in uiViews: %>
-			<a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>"><%= element.title %></a>
-			<% end %>
-		</div>
-		</div>
-		<div class="item">
-		<a href="/module.html"><b>Modules</b></a>
-		<div class="menu">
-			<% for element in uiModules: %>
-			<a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>"><%= element.title %></a>
-			<% end %>
-		</div>
-		</div>
-		<div class="item">
-		<b>Behavior</b>
-		<div class="menu">
-			<% for element in uiBehavior: %>
-			<a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>"><%= element.title %></a>
-			<% end %>
-		</div>
-		</div>
-		<div class="item">
-		<b>Style Guide</b>
-		<div class="menu">
-			<% for element in uiGuide: %>
-			<a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>"><%= element.title %></a>
-			<% end %>
-		</div>
-		</div> -->
-	</div>
 
-	<div class="ui fixed transparent inverted main menu">
-		<div class="container">
-		<a class="launch item"><i class="icon list layout"></i> Content</a>
-		<div class="title item">
-
+<body id="example" unresolved>
+	<div class="ui large inverted vertical labeled icon fixed active sidebar menu" id="menu">
+		{{#each pages}}
+		<div class="item">
+					<a href="{{relative .. /page.dest this.dest}}">{{ data.title }}</a>
 		</div>
-		<div class="right menu">
-			<div class="vertically fitted borderless item">
-			</div>
-			<a class="popup icon github item" data-content="View project on Github" href="https://github.com/quirkyinc/semantic">
-			<i class="icon github"></i>
-			</a>
-		</div>
-		</div>
-	</div>
-	<div class="ui black huge launch right attached button">
-		<i class="icon list layout"></i>
-		<span class="text">Menu</span>
+		{{/each }}
 	</div>
 	{{> body  }}
 
