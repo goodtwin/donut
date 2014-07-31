@@ -6,10 +6,9 @@
     <link href="donut.field.theme.css" rel="stylesheet">
     <!-- Content -->
     <template if="{{label}}">
-      <label for="input">{{label}}</label>
-      <core-input></core-input>
+      <label for="input" id="label">{{label}}</label>
     </template>
-    <div id="input">
+    <div id="inputContainer">
       <shadow></shadow>
     </div>
     <div id="errorContainer">
