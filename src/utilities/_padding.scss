@@ -1,4 +1,4 @@
-.soft          	 { padding:       $base-spacing-unit!important; }
+.soft          	 	{ padding:       $base-spacing-unit!important; }
 .soft--top      	{ padding-top:   $base-spacing-unit!important; }
 .soft--right    	{ padding-right: $base-spacing-unit!important; }
 .soft--bottom   	{ padding-bottom:$base-spacing-unit!important; }
@@ -13,6 +13,14 @@
 .soft-half--left    { padding-left:  $half-spacing-unit!important; }
 .soft-half--ends    { padding-top:   $half-spacing-unit!important; padding-bottom:$half-spacing-unit!important; }
 .soft-half--sides   { padding-right: $half-spacing-unit!important; padding-left:  $half-spacing-unit!important; }
+
+.soft-double          	{ padding:       double($base-spacing-unit)!important; }
+.soft-double--top      	{ padding-top:   double($base-spacing-unit)!important; }
+.soft-double--right    	{ padding-right: double($base-spacing-unit)!important; }
+.soft-double--bottom   	{ padding-bottom:double($base-spacing-unit)!important; }
+.soft-double--left     	{ padding-left:  double($base-spacing-unit)!important; }
+.soft-double--ends     	{ padding-top:   double($base-spacing-unit)!important; padding-bottom:double($base-spacing-unit)!important; }
+.soft-double--sides    	{ padding-right: double($base-spacing-unit)!important; padding-left:  double($base-spacing-unit)!important; }
 
 .soft-grid          { padding:       $base-grid-gutter!important; }
 .soft-grid--top     { padding-top:   $base-grid-gutter!important; }

@@ -11,7 +11,6 @@
 	<template if="{{ removable }}">
 		<core-icon id="removable" icon="clear" size="16"></core-icon>
 	</template>
-	<content select=".detail"></content>
 </template>
 <script>
 	Polymer({
@@ -35,6 +34,15 @@
 		* @default false
 		*/
 		removable: {value: false},
+		/**
+		* (optional) Identifies the label as occupying a specific position
+		* inside of another element.
+		*
+		* @attribute attached
+		* @type boolean
+		* @default false
+		*/
+		attached: {value: false}
 	}
 	});
 </script>

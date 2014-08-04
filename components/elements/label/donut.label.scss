@@ -33,3 +33,35 @@ Attributes
 --------------------*/
 #icon {
 }
+
+/*-------------------
+	attached
+--------------------*/
+:host([attached]) {
+	position: absolute;
+}
+
+:host([attached][top]), :host([attached][bottom]) {
+	left: 0;
+	width: 100%;
+}
+
+:host([attached][top]) {
+	top: 0;
+	bottom: auto;
+}
+
+:host([attached][bottom]) {
+	top: auto;
+	bottom: 0;
+}
+
+:host([attached][top][left]), :host([attached][top][right]),
+:host([attached][bottom][left]), :host([attached][bottom][right]) {
+	width: auto;
+}
+
+:host([attached][right]) {
+	left: auto;
+	right: 0;
+}
