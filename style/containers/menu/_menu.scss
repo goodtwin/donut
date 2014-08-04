@@ -11,14 +11,11 @@
 	background-color: #FFFFFF;
 	font-weight: normal;
 	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-	border-radius: 0.1875rem;
 }
 
 .ui.menu > .item:first-child {
-	border-radius: 0.1875em 0px 0px 0.1875em;
 }
 .ui.menu > .item:last-child {
-	border-radius: 0px 0.1875em 0.1875em 0px;
 }
 
 .ui.menu .item {
