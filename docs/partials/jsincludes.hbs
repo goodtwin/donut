@@ -1,21 +1,43 @@
-<!-- <script src="../assets/javascripts/lib/jquery.min.js"></script>
+<script src="../assets/javascripts/lib/jquery.min.js"></script>
 <script src="../assets/javascripts/lib/history.js"></script>
 <script src="../assets/javascripts/lib/easing.js"></script>
 <script src="../assets/javascripts/lib/ace/ace.js"></script>
 <script src="../assets/javascripts/lib/tablesort.js"></script>
 <script src="../assets/javascripts/lib/waypoints.js"></script>
 
-<script src="../../style/javascripts/accordion.js"></script>
 <script src="../../style/javascripts/dropdown.js"></script>
 <script src="../../style/javascripts/modal.js"></script>
 <script src="../../style/javascripts/popup.js"></script>
-<script src="../../style/javascripts/sidebar.js"></script>
-<script src="../../style/javascripts/tab.js"></script>
 
 <script src="../assets/javascripts/docs.js"></script>
-<script src="../assets/javascripts/accordion.js"></script>
 <script src="../assets/javascripts/dropdown.js"></script>
 <script src="../assets/javascripts/modal.js"></script>
 <script src="../assets/javascripts/popup.js"></script>
-<script src="../assets/javascripts/sidebar.js"></script>
-<script src="../assets/javascripts/tab.js"></script> -->
+
+<script charset="utf-8">
+  // sidebar proof of concept
+
+  $(document).on('click','.ui.button[data-variation]',function(evt){
+    var $tgt = $(evt.target),
+      $sidebarContainment = $('.ui.sidebar-containment'),
+      variation = $tgt.attr('data-variation'),
+      $variation = $( "#" + $tgt.attr('data-sidebar-id') );
+
+
+    // currently css doesn't support animation with multiple
+    // sidebars coming in from the same side. easy hack-a-round.
+    if($sidebarContainment.is('.pushed')){
+      setTimeout(function(){
+        $variation.css({zIndex: 999});
+      },350);
+    } else {
+      $variation.css({zIndex: 1001});
+    }
+
+    $tgt.toggleClass('active');
+    $variation.toggleClass('active');
+    $sidebarContainment
+      .toggleClass(variation)
+      .toggleClass('pushed');
+  });
+</script>

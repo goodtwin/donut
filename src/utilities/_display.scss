@@ -1,6 +1,11 @@
-.table {
+[display-table] {
     display: table!important;
 }
-.table__cell {
+
+[display-table__cell] {
     display: table-cell!important;
+}
+
+[overflow][scrollable] {
+  overflow: auto;
 }
