@@ -1,0 +1,66 @@
+---
+css         : 'toolbar'
+title       : 'Toolbar'
+description : 'Horizontal bar containing elements that can be used for label, navigation, search and actions.'
+type        : 'Container'
+componentUrl: '/dist/components/containers/toolbar/donut.toolbar.html'
+---
+
+
+<link rel="import" href="/bower_components/core-icons/core-icons.html">
+<link rel="import" href="../../../components/elements/button/donut.button.html">
+<div class="main container prototype">
+
+  {{> header}}
+
+  <h2 class="ui dividing header">Types</h2>
+
+  <div class="follow example">
+    <h4 class="ui header">Toolbar</h4>
+    <p>Standard</p>
+    <donut-toolbar>
+        <donut-button class="basic primary" iconbutton="menu"></donut-button>
+        <span flex>Toolbar</span>
+        <donut-button class="basic primary" iconbutton="refresh"></donut-button>
+        <donut-button class="basic primary" iconbutton="add"></donut-button>
+    </donut-toolbar>
+
+    <p>Tall</p>
+    <donut-toolbar class="tall">
+        <donut-button class="basic primary" iconbutton="menu"></donut-button>
+        <span flex>Toolbar</span>
+        <donut-button class="basic primary" iconbutton="refresh"></donut-button>
+        <donut-button class="basic primary" iconbutton="add"></donut-button>
+    </donut-toolbar>
+
+    <p>Tall Bottom</p>
+    <donut-toolbar class="tall">
+        <donut-button class="basic primary bottom" iconbutton="menu"></donut-button>
+        <span flex class="bottom">Toolbar</span>
+        <donut-button class="basic primary bottom" iconbutton="refresh"></donut-button>
+        <donut-button class="basic primary bottom" iconbutton="add"></donut-button>
+    </donut-toolbar>
+
+
+    <p>Medium Offset</p>
+    <donut-toolbar class="medium-tall">
+        <donut-button class="basic primary" iconbutton="menu"></donut-button>
+        <span flex></span>
+        <donut-button class="basic primary" iconbutton="refresh"></donut-button>
+        <donut-button class="basic primary" iconbutton="add"></donut-button>
+        <span flex class="bottom indent">Toolbar</span>
+    </donut-toolbar>
+
+    <p>Kitchen Sink</p>
+    <donut-toolbar class="tall">
+        <donut-button class="basic primary" iconbutton="menu"></donut-button>
+        <span flex></span>
+        <donut-button class="basic primary" iconbutton="refresh"></donut-button>
+        <donut-button class="basic primary" iconbutton="add"></donut-button>
+        <div class="middle indent">label aligns to the middle</div>
+        <div class="bottom indent">some stuffs align to the bottom</div>
+    </donut-toolbar>
+</div>
+
+
+</div>

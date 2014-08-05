@@ -1,0 +1,25 @@
+<link rel="import" href="/bower_components/core-icon/core-icon.html">
+<link rel="import" href="/bower_components/core-toolbar/core-toolbar.html">
+<polymer-element name="donut-toolbar" extends="core-toolbar">
+  <template>
+    <link href="donut.toolbar.css" rel="stylesheet">
+    <link href="donut.toolbar.theme.css" rel="stylesheet">
+    <!-- Content -->
+    <shadow></shadow>
+  </template>
+  <script>
+    Polymer('donut-toolbar', {
+      publish: {
+        /**
+          * (optional) Specifies that a label be inline with the input
+          *
+          * @attribute animated
+          * @type boolean
+          * @default false
+          */
+        //inline: {value: false, reflect: true},
+        //label: {value: ''}
+      }
+    });
+  </script>
+</polymer-element>
