@@ -736,10 +736,6 @@ semantic.ready = function() {
     .on('mouseenter', handler.menu.mouseenter)
     .on('mouseleave', handler.menu.mouseleave)
   ;
-  $menu
-    .sidebar('attach events', '.launch.button, .launch.item')
-    .sidebar('attach events', $hideMenu, 'hide')
-  ;
   $waypoints
     .waypoint({
       continuous : false,

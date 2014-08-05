@@ -5,11 +5,13 @@
     <link href="donut.button.theme.css" rel="stylesheet">
     <!-- Content -->
     <template if="{{animated}}">
-      <div id="visible">
-        <content select=".visible"></content>
-      </div>
-      <div id="hidden">
-        <content select=".hidden"></content>
+      <div class="extra-divslap">
+        <div id="visible">
+          <content select=".visible"></content>
+        </div>
+        <div id="hidden">
+          <content select=".hidden"></content>
+        </div>
       </div>
     </template>
     <template if="{{ icon }}">
