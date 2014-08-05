@@ -1,0 +1,29 @@
+<link rel="import" href="/bower_components/core-icon/core-icon.html">
+<polymer-element name="donut-checkbox" attributes="id label value">
+<template>
+	<link href="donut.checkbox.css" rel="stylesheet">
+	<link href="donut.checkbox.theme.css" rel="stylesheet">
+	<!-- Content -->
+	<input type="checkbox" id="{{id}}" value="{{value}}">
+	<label for="{{id}}"></label>
+	<label for="{{id}}">{{label}}</label>
+	<content></content>
+</template>
+<script>
+	Polymer({
+	publish: {
+		/**
+		* (optional) Specifies the icon name or index in the set of icons
+		* available in the icon set. If using this property, load the icon
+		* set separately where the icon is used. Should not use `src`
+		* if you are using this property.
+		*
+		* @attribute icon
+		* @type string
+		* @default ''
+		*/
+		//icon: {value: ''},
+	}
+	});
+</script>
+</polymer-element>
