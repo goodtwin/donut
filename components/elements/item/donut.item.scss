@@ -16,6 +16,14 @@ donut-item
 
 }
 
+::content core-icon {
+	margin-right:10px;
+}
+
+:host(.core-selected) {
+	font-weight: bold;
+}
+
 /*******************************
 Attributes
 *******************************/
