@@ -1,0 +1,27 @@
+<link rel="import" href="/bower_components/core-icon/core-icon.html">
+<link rel="import" href="/bower_components/core-item/core-item.html">
+<polymer-element name="donut-item" attributes="" extends="core-item">
+<template>
+	<link href="donut.item.css" rel="stylesheet">
+	<link href="donut.item.theme.css" rel="stylesheet">
+	<!-- Content -->
+	<shadow></shadow>
+</template>
+<script>
+	Polymer({
+	publish: {
+		/**
+		* (optional) Specifies the icon name or index in the set of icons
+		* available in the icon set. If using this property, load the icon
+		* set separately where the icon is used. Should not use `src`
+		* if you are using this property.
+		*
+		* @attribute icon
+		* @type string
+		* @default ''
+		*/
+		//icon: {value: ''},
+	}
+	});
+</script>
+</polymer-element>

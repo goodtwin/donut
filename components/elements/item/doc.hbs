@@ -1,0 +1,58 @@
+---
+css         : 'item'
+title       : 'Item'
+description : 'Simple line-item object: a label and/or an icon that can also act as a link; maybe part of a menu'
+type        : 'Element'
+componentUrl: '/dist/components/elements/item/donut.item.html'
+---
+
+<link rel="import" href="/bower_components/core-icons/core-icons.html">
+<div class="main container prototype">
+
+{{> header}}
+
+<h2 class="ui dividing header">Types</h2>
+
+<!-- <div class="follow example">
+	<h4 class="ui header">Button</h4>
+	<p>A standard button</p>
+	<div class="ui ignored message">A standard button will be automatically sized according to the visible content size</div>
+	<donut-button>The Standard</donut-button>
+</div> -->
+
+<div class="example">
+	<h4 class="ui header">Standard</h4>
+
+	<p>Label only</p>
+
+	<donut-item label="Settings" horizontal center layout></donut-item>
+	<donut-item label="Account" horizontal center layout></donut-item>
+
+    <p>Icon and label</p>
+
+    <donut-item icon="settings" label="Settings" horizontal center layout></donut-item>
+    <donut-item icon="account-box" label="Account" horizontal center layout></donut-item>
+
+    <p>Links</p>
+
+    <donut-item icon="settings" label="Settings" horizontal center layout>
+		<a href="#settings" target="_self"></a>
+	</donut-item>
+    <donut-item icon="account-box" label="Account" horizontal center layout>
+		<a href="#account" target="_self"></a>
+	</donut-item>
+
+    <p>Complex</p>
+
+    <donut-item icon="account-circle" class="label-outline" horizontal center layout>
+      <div flex="">
+        <div>John Doe</div>
+        <div>123 A Street, San Francisco, CA</div>
+      </div>
+      <core-icon icon="more-vert"></core-icon>
+    </donut-item>
+
+</div>
+
+
+</div>

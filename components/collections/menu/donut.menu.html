@@ -1,0 +1,25 @@
+<link rel="import" href="/bower_components/core-icons/core-icons.html">
+<link rel="import" href="/bower_components/core-menu/core-menu.html">
+<link rel="import" href="../../elements/item/donut.item.html">
+<polymer-element name="donut-menu" attributes="" extends="core-menu">
+  <template>
+    <link href="donut.menu.css" rel="stylesheet">
+    <link href="donut.menu.theme.css" rel="stylesheet">
+    <!-- Content -->
+    <shadow></shadow>
+  </template>
+  <script>
+    Polymer({
+      publish: {
+        /**
+          * (optional) Specifies buttons are to be layed out vertically.
+          *
+          * @attribute vertical
+          * @type boolean
+          * @default false
+          */
+        //vertical: {value: false, reflect: true},
+      }
+    });
+  </script>
+</polymer-element>
