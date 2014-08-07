@@ -1,0 +1,41 @@
+<link rel="import" href="/bower_components/core-icon/core-icon.html">
+<polymer-element name="donut-select" attributes="id options placeholder">
+  <template>
+    <link href="donut.select.css" rel="stylesheet">
+    <link href="donut.select.theme.css" rel="stylesheet">
+    <!-- Content -->
+    <template if="{{ multiple }}">
+        <select name="{{id}}" id="{{id}}" multiple>
+            <template repeat="{{o in options}}">
+                <option value="{{o.value}}">{{o.label}}</option>
+            </template>
+        </select>
+    </template>
+    <template if="{{ !multiple }}">
+        <select name="{{id}}" id="{{id}}">
+            <option>{{placeholder}}</option>
+            <template repeat="{{o in options}}">
+                <option value="{{o.value}}">{{o.label}}</option>
+            </template>
+        </select>
+    </template>
+    <content></content>
+  </template>
+  <script>
+    Polymer({
+      publish: {
+        /**
+          * (optional) Specifies select as a multiselect
+          *
+          * @attribute multiple
+          * @type boolean
+          * @default false
+          */
+        multiple: {value: false},
+      },
+      created: function() {
+        this.options = [];
+      }
+    });
+  </script>
+</polymer-element>

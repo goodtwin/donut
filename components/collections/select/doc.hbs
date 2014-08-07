@@ -1,0 +1,41 @@
+---
+css         : 'select'
+title       : 'Select'
+description : 'Select dropdown element'
+type        : 'Collection'
+componentUrl: '/dist/components/collections/select/donut.select.html'
+---
+<div class="main container prototype">
+
+  {{> header}}
+
+  <h2 class="ui dividing header">Types</h2>
+
+    <div class="example">
+        <h4 class="ui header">Single</h4>
+
+        <donut-select
+            id="checkboxgroup1"
+            placeholder="Boolean"
+            options="[
+                {'label': 'True', 'value': 'true'},
+                {'label': 'False', 'value': 'false'}
+            ]"
+        ></donut-select>
+    </div>
+
+    <div class="example">
+        <h4 class="ui header">Multiple</h4>
+
+        <donut-select
+            multiple
+            id="checkboxgroup2"
+            placeholder="Toppings"
+            options="[
+                {'label': 'Lettuce', 'value': 'lettuce'},
+                {'label': 'Onion', 'value': 'onion'},
+                {'label': 'Tomato', 'value': 'tomato'}
+            ]"
+        ></donut-select>
+    </div>
+</div>
