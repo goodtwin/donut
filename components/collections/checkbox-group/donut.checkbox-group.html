@@ -1,0 +1,32 @@
+<link rel="import" href="/bower_components/core-icon/core-icon.html">
+<polymer-element name="donut-checkbox-group" attributes="id checkboxes">
+  <template>
+    <link href="donut.checkbox-group.css" rel="stylesheet">
+    <link href="donut.checkbox-group.theme.css" rel="stylesheet">
+    <!-- Content -->
+    <template repeat="{{c in checkboxes}}">
+        <div>
+            <input type="checkbox" id="{{c.id}}" value="{{c.value}}" name="{{id}}">
+            <label for="{{c.id}}"></label>
+            <label for="{{c.id}}">{{c.label}}</label>
+        </div>
+    </template>
+  </template>
+  <script>
+    Polymer({
+      publish: {
+        /**
+          * (optional) Specifies buttons are to be layed out vertically.
+          *
+          * @attribute vertical
+          * @type boolean
+          * @default false
+          */
+        //vertical: {value: false, reflect: true},
+      },
+      created: function() {
+        this.checkboxes = [];
+      }
+    });
+  </script>
+</polymer-element>

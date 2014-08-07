@@ -1,0 +1,29 @@
+---
+css         : 'checkbox-group'
+title       : 'Checkbox Group'
+description : 'Group of checkbox inputs'
+type        : 'Collection'
+componentUrl: '/dist/components/collections/checkbox-group/donut.checkbox-group.html'
+---
+<div class="main container prototype">
+
+  {{> header}}
+
+  <h2 class="ui dividing header">Types</h2>
+
+    <div class="example">
+        <h4 class="ui header">Standard</h4>
+
+        <p></p>
+
+        <p>Checkbox Group</p>
+        <donut-checkbox-group
+            id="checkboxgroup1"
+            checkboxes="[
+                {'id': 'checkboxgroup1_lettuce', 'label': 'Lettuce', 'value': 'lettuce'},
+                {'id': 'checkboxgroup1_onion', 'label': 'Onion', 'value': 'onion'},
+                {'id': 'checkboxgroup1_tomato', 'label': 'Tomato', 'value': 'tomato'}
+            ]"
+        ></donut-checkbox-group>
+    </div>
+</div>

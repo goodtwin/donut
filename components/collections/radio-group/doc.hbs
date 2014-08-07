@@ -1,0 +1,28 @@
+---
+css         : 'radio-group'
+title       : 'Radio Group'
+description : 'Group of radio inputs'
+type        : 'Collection'
+componentUrl: '/dist/components/collections/radio-group/donut.radio-group.html'
+---
+<div class="main container prototype">
+
+  {{> header}}
+
+  <h2 class="ui dividing header">Types</h2>
+
+    <div class="example">
+        <h4 class="ui header">Standard</h4>
+
+        <p></p>
+
+        <p>Radio Group</p>
+        <donut-radio-group
+            id="radiogroup1"
+            radios="[
+                {'id': 'radiogroup1_true', 'label': 'True', 'value': 'true'},
+                {'id': 'radiogroup1_false', 'label': 'False', 'value': 'false'}
+            ]"
+        ></donut-radio-group>
+    </div>
+</div>

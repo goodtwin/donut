@@ -1,0 +1,32 @@
+<link rel="import" href="/bower_components/core-icon/core-icon.html">
+<polymer-element name="donut-radio-group" attributes="id radios">
+  <template>
+    <link href="donut.radio-group.css" rel="stylesheet">
+    <link href="donut.radio-group.theme.css" rel="stylesheet">
+    <!-- Content -->
+    <template repeat="{{r in radios}}">
+        <div>
+            <input type="radio" id="{{r.id}}" value="{{r.value}}" name="{{id}}">
+            <label for="{{r.id}}"></label>
+            <label for="{{r.id}}">{{r.label}}</label>
+        </div>
+    </template>
+  </template>
+  <script>
+    Polymer({
+      publish: {
+        /**
+          * (optional) Specifies buttons are to be layed out vertically.
+          *
+          * @attribute vertical
+          * @type boolean
+          * @default false
+          */
+        //vertical: {value: false, reflect: true},
+      },
+      created: function() {
+        this.radios = [];
+      }
+    });
+  </script>
+</polymer-element>
