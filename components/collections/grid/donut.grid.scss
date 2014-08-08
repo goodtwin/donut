@@ -1,0 +1,32 @@
+@import "../../helpers/layout/flex";
+
+/*
+ * # Donut - Menu
+ * http://github.com/goodtwin/donut
+ *
+ *
+ * Copyright 2013 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+  donut-menu
+*******************************/
+$gutter: 20px;
+:host(donut-grid) {
+    display: block;
+    list-style:none;
+    margin:0;
+    padding:0;
+    margin-left:-$gutter;
+}
+
+:host(grid-item) {
+    display:inline-block;
+    padding-left:$gutter;
+    vertical-align:top;
+    width:100%;
+}

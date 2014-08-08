@@ -216,7 +216,7 @@ module.exports = function (grunt) {
         dest: 'dist/style/stylesheets/',
         ext: '.min.css'
       }
-    }
+  }
   });
 
 require('load-grunt-tasks')(grunt);

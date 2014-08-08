@@ -1,0 +1,48 @@
+<link rel="import" href="/bower_components/core-icons/core-icons.html">
+<polymer-element name="donut-grid" attributes="">
+  <template>
+    <link href="donut.grid.css" rel="stylesheet">
+    <link href="donut.grid.theme.css" rel="stylesheet">
+    <!-- Content -->
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+      publish: {
+        /**
+          * (optional) Specifies buttons are to be layed out vertically.
+          *
+          * @attribute vertical
+          * @type boolean
+          * @default false
+          */
+        //vertical: {value: false, reflect: true},
+      }
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="grid-item" attributes="">
+    <template>
+      <link href="donut.grid.css" rel="stylesheet">
+      <link href="donut.grid.theme.css" rel="stylesheet">
+      <!-- Content -->
+      <content></content>
+    </template>
+
+    <script>
+      Polymer({
+        publish: {
+          /**
+            * (optional) Specifies buttons are to be layed out vertically.
+            *
+            * @attribute vertical
+            * @type boolean
+            * @default false
+            */
+          //vertical: {value: false, reflect: true},
+        }
+      });
+    </script>
+</polymer-element>

@@ -8,6 +8,7 @@
 @import "mixins/relative";
 @import "mixins/self";
 @import "mixins/textalign";
+@import "mixins/width";
 
 html {
   @include crossaxis;
@@ -20,4 +21,5 @@ html {
   @include relative;
   @include self;
   @include textalign;
+  @include width;
 }

@@ -1,0 +1,32 @@
+---
+css         : 'grid'
+title       : 'grid'
+description : 'Grid'
+type        : 'Collection'
+componentUrl: '/dist/components/collections/grid/donut.grid.html'
+---
+<link rel="import" href="/bower_components/core-icons/core-icons.html">
+<div class="main container prototype">
+
+  {{> header}}
+
+  <h2 class="ui dividing header">Types</h2>
+
+  <div class="follow example">
+    <h4 class="ui header">Grid</h4>
+    <p></p>
+
+    <donut-grid
+        layout horizontal
+        one-whole
+        lap-and-up--one-half
+        desk--one-quarter
+    >
+        <grid-item flex two>ONE</grid-item>
+        <grid-item flex two>TWO</grid-item>
+        <grid-item flex>THREE</grid-item>
+        <grid-item flex>FOUR</grid-item>
+    </donut-grid>
+  </div>
+
+</div>

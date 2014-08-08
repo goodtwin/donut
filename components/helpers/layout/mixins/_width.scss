@@ -1,0 +1,113 @@
+@mixin width($namespace:"") {
+	/**
+	* Whole
+	*/
+	.#{$namespace}one-whole,[#{$namespace}one-whole]        { width:100%!important; }
+
+
+	/**
+	* Halves
+	*/
+	.#{$namespace}one-half,[#{$namespace}one-half]          { width:50%!important; }
+
+
+	/**
+	* Thirds
+	*/
+	.#{$namespace}one-third,[#{$namespace}one-third]         { width:33.333%!important; }
+	.#{$namespace}two-thirds,[#{$namespace}two-thirds]        { width:66.666%!important; }
+
+
+	/**
+	* Quarters
+	*/
+	.#{$namespace}one-quarter,[#{$namespace}one-quarter]      { width:25%!important; }
+	.#{$namespace}two-quartes,[#{$namespace}two-quarters]     { @extend .#{$namespace}one-half,[#{$namespace}one-half]; }
+	.#{$namespace}three-quarters,[#{$namespace}three-quarters]   { width:75%!important; }
+
+
+	/**
+	* Fifths
+	*/
+	.#{$namespace}one-fifth,[#{$namespace}one-fifth]         { width:20%!important; }
+	.#{$namespace}two-fifths,[#{$namespace}two-fifths]       { width:40%!important; }
+	.#{$namespace}three-fifths,[#{$namespace}three-fifths]      { width:60%!important; }
+	.#{$namespace}four-fifths,[#{$namespace}four-fifths]       { width:80%!important; }
+
+
+	/**
+	* Sixths
+	*/
+	.#{$namespace}one-sixth,[#{$namespace}one-sixth]         { width:16.666%!important; }
+	.#{$namespace}two-sixths,[#{$namespace}two-sixths]        { @extend .#{$namespace}one-third,[#{$namespace}one-third]; }
+	.#{$namespace}three-sixths,[#{$namespace}three-sixths]      { @extend .#{$namespace}one-half,[#{$namespace}one-half]; }
+	.#{$namespace}four-sixths,[#{$namespace}four-sixths]       { @extend .#{$namespace}two-thirds,[#{$namespace}two-thirds]; }
+	.#{$namespace}five-sixths,[#{$namespace}five-sixths]       { width:83.333%!important; }
+
+
+	/**
+	* Sevenths
+	*/
+	.#{$namespace}one-seventh,[#{$namespace}one-seventh]         { width:14.2857%!important; }
+	.#{$namespace}two-sevenths,[#{$namespace}two-sevenths]        { width:28.5714%!important; }
+	.#{$namespace}three-sevenths,[#{$namespace}three-sevenths]      { width:42.8571%!important; }
+	.#{$namespace}four-sevenths,[#{$namespace}four-sevenths]       { width:57.1429%!important; }
+	.#{$namespace}five-sevenths,[#{$namespace}five-sevenths]       { width:71.3976%!important; }
+	.#{$namespace}six-sevenths,[#{$namespace}six-sevenths]        { width:85.6833%!important; }
+
+
+	/**
+	* Eighths
+	*/
+	.#{$namespace}one-eighth,[#{$namespace}one-eighth]        { width:12.5%!important; }
+	.#{$namespace}two-eighths,[#{$namespace}two-eighths]       { @extend .#{$namespace}one-quarter,[#{$namespace}one-quarter]; }
+	.#{$namespace}three-eighths,[#{$namespace}three-eighths]     { width:37.5%!important; }
+	.#{$namespace}four-eighths,[#{$namespace}four-eighths]      { @extend .#{$namespace}one-half,[#{$namespace}one-half]; }
+	.#{$namespace}five-eighths,[#{$namespace}five-eighths]      { width:62.5%!important; }
+	.#{$namespace}six-eighths,[#{$namespace}six-eighths]      { @extend .#{$namespace}three-quarters,[#{$namespace}three-quarters]; }
+	.#{$namespace}seven-eighths,[#{$namespace}seven-eighths]     { width:87.5%!important; }
+
+
+	/**
+	* Ninths
+	*/
+	.#{$namespace}one-ninth,[#{$namespace}one-ninth]         { width:11.11111%!important; }
+	.#{$namespace}two-ninths,[#{$namespace}two-ninths]        { width:22.22222%!important; }
+	.#{$namespace}three-ninths,[#{$namespace}three-ninths]      { width:33.33333%!important; }
+	.#{$namespace}four-ninths,[#{$namespace}four-ninths]       { width:44.44444%!important; }
+	.#{$namespace}five-ninths,[#{$namespace}five-ninths]       { width:55.55556%!important; }
+	.#{$namespace}six-ninths,[#{$namespace}six-ninths]        { width:66.66667%!important; }
+	.#{$namespace}seven-ninths,[#{$namespace}seven-ninths]      { width:77.77778%!important; }
+	.#{$namespace}eight-ninths,[#{$namespace}eight-ninths]      { width:88.88889%!important; }
+
+
+	/**
+	* Tenths
+	*/
+	.#{$namespace}one-tenth,[#{$namespace}one-tenth]         { width:10%!important; }
+	.#{$namespace}two-tenths,[#{$namespace}two-tenths]        { @extend .#{$namespace}one-quarter,[#{$namespace}one-quarter]; }
+	.#{$namespace}three-tenths,[#{$namespace}three-tenths]      { width:30%!important; }
+	.#{$namespace}four-tenths,[#{$namespace}four-tenths]       { @extend .#{$namespace}two-fifths,[#{$namespace}two-fifths]; }
+	.#{$namespace}five-tenths,[#{$namespace}five-tenths]       { @extend .#{$namespace}one-half,[#{$namespace}one-half]; }
+	.#{$namespace}six-tenths,[#{$namespace}six-tenths]        { @extend .#{$namespace}three-fifths,[#{$namespace}three-fifths]; }
+	.#{$namespace}seven-tenths,[#{$namespace}seven-tenths]      { width:70%!important; }
+	.#{$namespace}eight-tenths,[#{$namespace}eight-tenths]      { @extend .#{$namespace}four-fifths,[#{$namespace}four-fifths]; }
+	.#{$namespace}nine-tenths,[#{$namespace}nine-tenths]       { width:90%!important; }
+
+
+	/**
+	* Twelfths
+	*/
+	.#{$namespace}one-twelfth,[#{$namespace}one-twelfth]       { width:8.333%!important; }
+	.#{$namespace}two-twelfths,[#{$namespace}two-twelfths]      { @extend .#{$namespace}one-sixth,[#{$namespace}one-sixth]; }
+	.#{$namespace}three-twelfths,[#{$namespace}three-twelfths]    { @extend .#{$namespace}one-quarter,[#{$namespace}one-quarter]; }
+	.#{$namespace}four-twelfths,[#{$namespace}four-twelfths]     { @extend .#{$namespace}one-third,[#{$namespace}one-third]; }
+	.#{$namespace}five-twelfths,[#{$namespace}five-twelfths]     { width:41.666%!important; }
+	.#{$namespace}six-twelfths,[#{$namespace}six-twelfths]      { @extend .#{$namespace}one-half,[#{$namespace}one-half]; }
+	.#{$namespace}seven-twelfths,[#{$namespace}seven-twelfths]    { width:58.333%!important; }
+	.#{$namespace}eight-twelfths,[#{$namespace}eight-twelfths]    { @extend .#{$namespace}two-thirds,[#{$namespace}two-thirds]; }
+	.#{$namespace}nine-twelfths,[#{$namespace}nine-twelfths]     { @extend .#{$namespace}three-quarters,[#{$namespace}three-quarters]; }
+	.#{$namespace}ten-twelfths,[#{$namespace}ten-twelfths]      { @extend .#{$namespace}five-sixths,[#{$namespace}five-sixths]; }
+	.#{$namespace}eleven-twelfths,[#{$namespace}eleven-twelfths]   { width:91.666%!important; }
+
+}
